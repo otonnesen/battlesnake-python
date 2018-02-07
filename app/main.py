@@ -14,7 +14,7 @@ def start():
     game_id = data['game_id']
     board_width = data['width']
     board_height = data['height']
-    print data
+    print(data)
 
     head_url = '%s://%s/static/head.png' % (
         bottle.request.urlparts.scheme,
@@ -34,7 +34,7 @@ def start():
 @bottle.post('/move')
 def move():
     data = bottle.request.json
-    print data['move']
+    print(data['move'])
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
