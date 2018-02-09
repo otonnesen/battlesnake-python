@@ -29,7 +29,7 @@ def start():
     return {
         'color': '#add8e6', #light blue
         'secondary_color': '#ffff00', # yellow
-        'taunt': '{} ({}x{})'.format(game_id, board_width, board_height),
+        'taunt': 'WOW',
         'head_url': head_url,
         'name': 'Computer_Science_First_Years',
         'head_type': 'fang',
