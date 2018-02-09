@@ -22,12 +22,13 @@ class board:
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
     }
     """
-    def __init__(self, width, height, snake):
+    def __init__(self, width, height, us, snakes):
         self.board = [[0 for x in range(0, width)] for y in range(0, height)]
         self.width = width
         self.height = height
-        self.snake = snake
-        self.snake_head = snake['coords'][0]
+        self.snake = us
+        self.snake_head = us['coords'][0]
+        self.Snakes(snakes)
 
     """
     function to add snakes the board
@@ -51,9 +52,11 @@ class board:
     Basically whats going to kill us? dont do that
     """
     def check(self):
+        moves = ['up', 'down', 'left', 'right']
         not_moves = []
         not_moves.append(self.checkWalls())
-        not_moves.append(self.checkSnakes)
+        #not_moves.append(self.checkSnakes())
+        return list(moves - not_moves)
 
     """
     tells us where walls are
@@ -72,5 +75,6 @@ class board:
         
         return not_moves
 
-
+    def checkSnakes(self):
+        pass
 

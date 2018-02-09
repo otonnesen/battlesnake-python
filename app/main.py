@@ -3,8 +3,6 @@ import os
 import random
 from board import board
 
-global game_board
-
 @bottle.route('/static/<path:path>')
 def static(path):
     return bottle.static_file(path, root='static/')
@@ -55,12 +53,14 @@ def move():
         taunt: string;
     }
     """
+    game_board = board(data['width'], data['height'], data['you'], data['snakes'])
+    moves = game_board.check()
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
 
     return {
-        'move': random.choice(directions),
+        'move': random.choice(moves),
         'taunt': 'battlesnake-python!'
     }
 
