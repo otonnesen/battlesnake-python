@@ -69,10 +69,10 @@ class board ():
         elif (self.snake_head['x'] >= self.width):
             not_moves.append('right')
         
-        if (self.snake_head['y'] <= 1):
-            not_moves.append('down')
-        elif (self.snake_head['y'] >= self.height - 1):
+        if (self.snake_head['y'] <= 0):
             not_moves.append('up')
+        elif (self.snake_head['y'] >= self.height):
+            not_moves.append('down')
         
         return not_moves
 
