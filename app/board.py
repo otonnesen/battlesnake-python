@@ -1,9 +1,33 @@
 class board:
 
-    def __init__(self, width, height):
+    """
+    0 are no snake or chance of snake being there
+    1 is no snake but chance of them being there
+    2 is there is a snake there
+    3 is food
+    4 is us
+    5 is where we can be
+    {
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,3,0,0,0,0,0,5,4,4,4,4,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,1,0,0,0,5,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,1,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,2,0,0,0,0,0,0,3,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    }
+    """
+    def __init__(self, width, height, snake):
         self.board = [[0 for x in range(0, width)] for y in range(0, height)]
         self.width = width
         self.height = height
+        self.snake = snake
+        self.snake_head = snake['coords'][0]
 
     """
     function to add snakes the board
@@ -22,3 +46,31 @@ class board:
     """
     def food(self, food):
         pass
+
+    """
+    Basically whats going to kill us? dont do that
+    """
+    def check(self):
+        not_moves = []
+        not_moves.append(self.checkWalls())
+        not_moves.append(self.checkSnakes)
+
+    """
+    tells us where walls are
+    """
+    def checkWalls(self):
+        not_moves = []
+        if (self.snake_head[0] <= 1):
+            not_moves.append('left')
+        elif (self.snake_head[0] >= self.width):
+            not_moves.append('up')
+        
+        if (self.snake_head[1] <= 1):
+            not_moves.append('down')
+        elif (self.snake_head[1] >= self.height - 1):
+            not_moves.append('up')
+        
+        return not_moves
+
+
+

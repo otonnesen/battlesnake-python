@@ -1,9 +1,9 @@
 import bottle
 import os
 import random
-import board
+from board import board
 
-global board
+global game_board
 
 @bottle.route('/static/<path:path>')
 def static(path):
@@ -19,6 +19,7 @@ def start():
     game_id = data['game_id']
     board_width = data['width']
     board_height = data['height']
+    game_board = board(board_width, board_height)
 
 
     head_url = '%s://%s/static/head.png' % (
