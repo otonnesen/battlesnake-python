@@ -60,7 +60,7 @@ def move():
 
     return {
         'move': random.choice(moves),
-        'taunt': 'battlesnake-python!'
+        'taunt': 'UVIC FRESHIES'
     }
 
 
