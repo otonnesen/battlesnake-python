@@ -1,20 +1,25 @@
 import bottle
 import os
 import random
+import board
 
+global board
 
 @bottle.route('/static/<path:path>')
 def static(path):
     return bottle.static_file(path, root='static/')
 
-
+"""
+This start request only happens once so if we take in all the json data
+into a object we can then just work with that object to speed things up
+"""
 @bottle.post('/start')
 def start():
     data = bottle.request.json
     game_id = data['game_id']
     board_width = data['width']
     board_height = data['height']
-    print(data)
+
 
     head_url = '%s://%s/static/head.png' % (
         bottle.request.urlparts.scheme,
@@ -24,17 +29,31 @@ def start():
     # TODO: Do things with data
 
     return {
-        'color': '#00FF00',
+        'color': '#add8e6', #light blue
+        'secondary_color': '#ffff00', # yellow
         'taunt': '{} ({}x{})'.format(game_id, board_width, board_height),
         'head_url': head_url,
-        'name': 'battlesnake-python'
+        'name': 'Computer_Science_First_Years',
+        'head_type': 'fang',
+        'tail_type': 'pixel'
     }
 
 
 @bottle.post('/move')
 def move():
     data = bottle.request.json
-    print(data['move'])
+    """ 
+    json format for snake
+    interface Snake {
+        body: List<Point>;
+        health: number;
+        id: string;
+        length: number;
+        name: string;
+        object: 'snake';
+        taunt: string;
+    }
+    """
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
