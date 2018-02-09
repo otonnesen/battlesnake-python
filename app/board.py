@@ -1,4 +1,4 @@
-class board:
+class board ():
 
     """
     0 are no snake or chance of snake being there
@@ -27,7 +27,7 @@ class board:
         self.width = width
         self.height = height
         self.snake = us
-        self.snake_head = us['coords'][0]
+        self.snake_head = us['body']['data'][0]
         self.Snakes(snakes)
 
     """
@@ -50,27 +50,28 @@ class board:
 
     """
     Basically whats going to kill us? dont do that
+    returns: a list of moves that wont kill us
     """
     def check(self):
         moves = ['up', 'down', 'left', 'right']
         not_moves = []
-        not_moves.append(self.checkWalls())
+        not_moves = not_moves + self.checkWalls()
         #not_moves.append(self.checkSnakes())
-        return list(moves - not_moves)
+        return list(set(moves).difference(not_moves))
 
     """
     tells us where walls are
     """
     def checkWalls(self):
         not_moves = []
-        if (self.snake_head[0] <= 1):
+        if (self.snake_head['x'] <= 1):
             not_moves.append('left')
-        elif (self.snake_head[0] >= self.width):
-            not_moves.append('up')
+        elif (self.snake_head['x'] >= self.width):
+            not_moves.append('right')
         
-        if (self.snake_head[1] <= 1):
+        if (self.snake_head['y'] <= 1):
             not_moves.append('down')
-        elif (self.snake_head[1] >= self.height - 1):
+        elif (self.snake_head['y'] >= self.height - 1):
             not_moves.append('up')
         
         return not_moves
