@@ -1,23 +1,49 @@
 class board ():
 
     """
-    0 are no snake or chance of snake being there
-    1 is no snake but chance of them being there and they will kill us
-    2 is no snake but chance of them being there wont kill us
-    3 is there is a snake there
-    4 is food
-    5 is us
-    6 is where we can be
+    -3 there is food
+    -2 there is a bot we can kill
+    0 there is a open space no snake will be on the next turn
+    4 a snake may be there on the next turn that will kill us
+    5 a snake body part
+    we add values on a square and take the lowest square lower is better
+    case 1: no snakes around us then lowest option would be 4 we would take it
+        {00040000}
+        {00454000}
+        {00050000}
+        {00000000}
+    case 2: food on a piece we can get to so 4 + (-3) we would go to that piece
+        {00040000}
+        {00451000}
+        {00050000}
+        {00000000}
+    case 3: snake body on a part that we could go to next so 4 + 9 
+            (note five is both us and the other snake)
+        {00045400}
+        {00459000}
+        {00050000}
+        {00000000}
+    case 4: snake may move there and is the same size or bigger next turn so 4 + 4
+        {00040000}
+        {00458555}
+        {00050000}
+        {00000000}
+    case 5: snake is smaller than us and may move there (we want to kill it)
+            so 4 + (-2)
+        {00040000}
+        {00452550}
+        {00050000}
+        {00050000}
     {
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,3,0,0,0,0,0,6,5,5,5,5,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,1,0,0,0,6,0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,1,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,2,0,0,0,0,0,0,3,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,3,0,0,0,0,0,1,4,4,4,4,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,1,4,1,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -38,18 +64,18 @@ class board ():
         for snake in snakes['data']:
             # if the snake will kill us on collision put a one where it can be
             if snake['length'] >= self.snake['length']:
-                self.plot(snake['body']['data'][0]['x'] + 1, snake['body']['data'][0]['y'], 1)
-                self.plot(snake['body']['data'][0]['x'] - 1, snake['body']['data'][0]['y'], 1)
-                self.plot(snake['body']['data'][0]['x'], snake['body']['data'][0]['y'] + 1, 1)
-                self.plot(snake['body']['data'][0]['x'], snake['body']['data'][0]['y'] - 1, 1)
+                self.plot(snake['body']['data'][0]['x'] + 1, snake['body']['data'][0]['y'], 3)
+                self.plot(snake['body']['data'][0]['x'] - 1, snake['body']['data'][0]['y'], 3)
+                self.plot(snake['body']['data'][0]['x'], snake['body']['data'][0]['y'] + 1, 3)
+                self.plot(snake['body']['data'][0]['x'], snake['body']['data'][0]['y'] - 1, 3)
             else: # the snake will die on collision
-                self.plot(snake['body']['data'][0]['x'] + 1, snake['body']['data'][0]['y'], 2)
-                self.plot(snake['body']['data'][0]['x'] - 1, snake['body']['data'][0]['y'], 2)
-                self.plot(snake['body']['data'][0]['x'], snake['body']['data'][0]['y'] + 1, 2)
-                self.plot(snake['body']['data'][0]['x'], snake['body']['data'][0]['y'] - 1, 2)
+                self.plot(snake['body']['data'][0]['x'] + 1, snake['body']['data'][0]['y'], -2)
+                self.plot(snake['body']['data'][0]['x'] - 1, snake['body']['data'][0]['y'], -2)
+                self.plot(snake['body']['data'][0]['x'], snake['body']['data'][0]['y'] + 1, -2)
+                self.plot(snake['body']['data'][0]['x'], snake['body']['data'][0]['y'] - 1, -2)
             
             for coord in snake['body']['data']:
-                self.plot(coord['x'], coord['y'], 3)
+                self.plot(coord['x'], coord['y'], 4)
 
     """
     adds our own snake on the map
