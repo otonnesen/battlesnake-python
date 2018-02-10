@@ -113,7 +113,7 @@ class board ():
         moves = list(set(moves).difference(not_moves))
         moves = self.checkSnakes(moves)
         #not_moves.append(self.checkSnakes())
-        return moves
+        return [x[0] for x in moves]
 
     """
     tells us where walls are

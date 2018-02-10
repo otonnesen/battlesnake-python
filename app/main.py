@@ -61,7 +61,7 @@ def move():
 
     return {
         'move': random.choice(moves),
-        'taunt': 'UVIC FRESHIES'
+        'taunt': 'v1'
     }
 
 
