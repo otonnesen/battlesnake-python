@@ -164,7 +164,7 @@ class board ():
                 elif left == val:
                     best_moves.append(('left', left))
                     break
-        
+
         if self.snake_head['y']+1 < self.height:
             down = self.board[self.snake_head['x']][self.snake_head['y'] + 1]
             for move, val in best_moves:
@@ -176,7 +176,7 @@ class board ():
                     best_moves.append(('down', down))
                     break
 
-        if self.snake_head['y']-1 >= self.height:
+        if self.snake_head['y']-1 >= 0:
             up = self.board[self.snake_head['x']][self.snake_head['y'] - 1]
             for move, val in best_moves:
                 if up < val:
@@ -186,7 +186,6 @@ class board ():
                 elif up == val:
                     best_moves.append(('up', up))
                     break
-        
 
         return best_moves
         
