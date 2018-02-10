@@ -3,8 +3,6 @@ import os
 import random
 from board import board
 
-animation = False
-
 @bottle.route('/static/<path:path>')
 def static(path):
     return bottle.static_file(path, root='static/')
@@ -60,18 +58,10 @@ def move():
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
-    anime2 = '<(o.O)>'
-    anime1 = '<(O.o)>'
-    anime = ''
-    if animation == False:
-        anime = anime1
-        animation = True
-    else:
-        anime = anime2
-        animation = False
+    animations = ['<(o,o)>', '<(O.o)>', '<(o.O)>', '<(O.O)>']
     return {
         'move': random.choice(moves),
-        'taunt': anime
+        'taunt': random.choice(animations)
     }
 
 
