@@ -122,3 +122,6 @@ class board ():
         if (x < self.width and x >= 0) and (y < self.height and y >= 0):
             self.board[x][y] = num
 
+    def run(self):
+        self.Snakes(self.other_snakes)
+        self.plotSelf()

@@ -53,6 +53,7 @@ def move():
     }
     """
     game_board = board(data['width'], data['height'], data['you'], data['snakes'])
+    game_board.run()
     moves = game_board.check()
 
     # TODO: Do things with data

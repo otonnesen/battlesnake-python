@@ -1,39 +1,62 @@
 from board import board
 data = {
   "width": 13,
-  "height": 14,
-  "id": 2192,
-  "turn": 4,
+  "height": 18,
+  "id": 2256,
+  "turn": 2,
   "snakes": {
     "data": [
       {
-        "id": "49bd6da9-1970-41b1-8d99-c32c484b943b",
+        "id": "64f03f9f-c332-4330-8a1e-8342c8d887c7",
         "health": 98,
-        "length": 4,
-        "taunt": "He's the brains, sweetheart!",
-        "name": "snek v4",
+        "length": 3,
+        "taunt": "Boop the snoot!",
+        "name": "LUL",
         "object": "snake",
         "body": {
           "data": [
             {
               "object": "point",
+              "x": 0,
+              "y": 9
+            },
+            {
+              "object": "point",
+              "x": 1,
+              "y": 9
+            },
+            {
+              "object": "point",
+              "x": 2,
+              "y": 9
+            }
+          ],
+          "object": "list"
+        }
+      },
+      {
+        "id": "ed6bf75a-a3f6-4454-9391-6cec6d3b520b",
+        "health": 98,
+        "length": 3,
+        "taunt": "D.Va online.",
+        "name": "D.Va",
+        "object": "snake",
+        "body": {
+          "data": [
+            {
+              "object": "point",
+              "x": 10,
+              "y": 3
+            },
+            {
+              "object": "point",
+              "x": 10,
+              "y": 2
+            },
+            {
+              "object": "point",
               "x": 9,
-              "y": 0
-            },
-            {
-              "object": "point",
-              "x": 8,
-              "y": 0
-            },
-            {
-              "object": "point",
-              "x": 8,
-              "y": 1
-            },
-            {
-              "object": "point",
-              "x": 9,
-              "y": 1
+              "y": 2
             }
           ],
           "object": "list"
@@ -41,7 +64,7 @@ data = {
       },
       {
         "id": "c3e89743-fbdd-465b-8208-45ea0919b05a",
-        "health": 96,
+        "health": 98,
         "length": 3,
         "taunt": "UVIC FRESHIES",
         "name": "test",
@@ -50,201 +73,23 @@ data = {
           "data": [
             {
               "object": "point",
-              "x": 6,
-              "y": 5
+              "x": 2,
+              "y": 15
             },
             {
               "object": "point",
-              "x": 7,
-              "y": 5
+              "x": 2,
+              "y": 14
             },
             {
               "object": "point",
-              "x": 8,
-              "y": 5
+              "x": 1,
+              "y": 14
             }
           ],
           "object": "list"
         }
       },
-      {
-        "id": "47ba8e18-3a1b-4894-9e50-bc910dc7b3f0",
-        "health": 96,
-        "length": 3,
-        "taunt": "Outta my way, snake!",
-        "name": "FooSnake",
-        "object": "snake",
-        "body": {
-          "data": [
-            {
-              "object": "point",
-              "x": 4,
-              "y": 9
-            },
-            {
-              "object": "point",
-              "x": 4,
-              "y": 10
-            },
-            {
-              "object": "point",
-              "x": 4,
-              "y": 11
-            }
-          ],
-          "object": "list"
-        }
-      },
-      {
-        "id": "1586a251-ecdf-414b-90dd-e0e75a05abcc",
-        "health": 96,
-        "length": 3,
-        "taunt": "TIMED OUT",
-        "name": "BaffleSnake0.1",
-        "object": "snake",
-        "body": {
-          "data": [
-            {
-              "object": "point",
-              "x": 0,
-              "y": 5
-            },
-            {
-              "object": "point",
-              "x": 0,
-              "y": 6
-            },
-            {
-              "object": "point",
-              "x": 0,
-              "y": 7
-            }
-          ],
-          "object": "list"
-        }
-      },
-      {
-        "id": "17f2b256-6e93-4cc9-abfe-ce957a227bb0",
-        "health": 96,
-        "length": 3,
-        "taunt": "battlesnake-python!",
-        "name": "2017 bounty-swu-ake",
-        "object": "snake",
-        "body": {
-          "data": [
-            {
-              "object": "point",
-              "x": 3,
-              "y": 6
-            },
-            {
-              "object": "point",
-              "x": 4,
-              "y": 6
-            },
-            {
-              "object": "point",
-              "x": 5,
-              "y": 6
-            }
-          ],
-          "object": "list"
-        }
-      },
-      {
-        "id": "d159f700-e06a-4195-a1f9-8dccdfe56e7f",
-        "health": 96,
-        "length": 3,
-        "taunt": "Outta my way, snake!",
-        "name": "FooSnake",
-        "object": "snake",
-        "body": {
-          "data": [
-            {
-              "object": "point",
-              "x": 11,
-              "y": 4
-            },
-            {
-              "object": "point",
-              "x": 11,
-              "y": 5
-            },
-            {
-              "object": "point",
-              "x": 11,
-              "y": 6
-            }
-          ],
-          "object": "list"
-        }
-      }
-    ],
-    "object": "list"
-  },
-  "food": {
-    "data": [
-      {
-        "object": "point",
-        "x": 9,
-        "y": 13
-      },
-      {
-        "object": "point",
-        "x": 8,
-        "y": 8
-      },
-      {
-        "object": "point",
-        "x": 7,
-        "y": 13
-      },
-      {
-        "object": "point",
-        "x": 9,
-        "y": 11
-      },
-      {
-        "object": "point",
-        "x": 12,
-        "y": 3
-      },
-      {
-        "object": "point",
-        "x": 7,
-        "y": 8
-      },
-      {
-        "object": "point",
-        "x": 11,
-        "y": 3
-      },
-      {
-        "object": "point",
-        "x": 3,
-        "y": 4
-      },
-      {
-        "object": "point",
-        "x": 3,
-        "y": 9
-      },
-      {
-        "object": "point",
-        "x": 3,
-        "y": 1
-      },
-      {
-        "object": "point",
-        "x": 9,
-        "y": 8
-      }
-    ],
-    "object": "list"
-  },
-  "object": "world",
-  "dead_snakes": {
-    "data": [
       {
         "id": "a9a2f79e-f6d0-4bd0-9531-b36cfa9de050",
         "health": 98,
@@ -256,18 +101,150 @@ data = {
           "data": [
             {
               "object": "point",
-              "x": 3,
-              "y": 14
+              "x": 9,
+              "y": 6
             },
             {
               "object": "point",
-              "x": 3,
-              "y": 13
+              "x": 9,
+              "y": 7
+            },
+            {
+              "object": "point",
+              "x": 10,
+              "y": 7
+            }
+          ],
+          "object": "list"
+        }
+      },
+      {
+        "id": "f56ed643-d88a-4638-914e-b9b3c8cf58b3",
+        "health": 98,
+        "length": 3,
+        "taunt": "Do battle snakes dream of electric apples?",
+        "name": "Batty Snake",
+        "object": "snake",
+        "body": {
+          "data": [
+            {
+              "object": "point",
+              "x": 0,
+              "y": 7
+            },
+            {
+              "object": "point",
+              "x": 1,
+              "y": 7
             },
             {
               "object": "point",
               "x": 2,
-              "y": 13
+              "y": 7
+            }
+          ],
+          "object": "list"
+        }
+      }
+    ],
+    "object": "list"
+  },
+  "food": {
+    "data": [
+      {
+        "object": "point",
+        "x": 4,
+        "y": 8
+      },
+      {
+        "object": "point",
+        "x": 11,
+        "y": 10
+      },
+      {
+        "object": "point",
+        "x": 12,
+        "y": 17
+      },
+      {
+        "object": "point",
+        "x": 1,
+        "y": 10
+      },
+      {
+        "object": "point",
+        "x": 8,
+        "y": 5
+      },
+      {
+        "object": "point",
+        "x": 5,
+        "y": 15
+      },
+      {
+        "object": "point",
+        "x": 6,
+        "y": 3
+      },
+      {
+        "object": "point",
+        "x": 6,
+        "y": 16
+      },
+      {
+        "object": "point",
+        "x": 8,
+        "y": 11
+      },
+      {
+        "object": "point",
+        "x": 4,
+        "y": 11
+      },
+      {
+        "object": "point",
+        "x": 1,
+        "y": 0
+      },
+      {
+        "object": "point",
+        "x": 12,
+        "y": 11
+      },
+      {
+        "object": "point",
+        "x": 12,
+        "y": 10
+      }
+    ],
+    "object": "list"
+  },
+  "object": "world",
+  "dead_snakes": {
+    "data": [
+      {
+        "id": "f53852c5-ad90-479b-874f-d2799d98c48a",
+        "health": 98,
+        "length": 3,
+        "taunt": "right, down",
+        "name": "hmm",
+        "object": "snake",
+        "body": {
+          "data": [
+            {
+              "object": "point",
+              "x": 7,
+              "y": 2
+            },
+            {
+              "object": "point",
+              "x": 6,
+              "y": 2
+            },
+            {
+              "object": "point",
+              "x": 7,
+              "y": 2
             }
           ],
           "object": "list"
@@ -278,7 +255,7 @@ data = {
   },
   "you": {
     "id": "c3e89743-fbdd-465b-8208-45ea0919b05a",
-    "health": 96,
+    "health": 98,
     "length": 3,
     "taunt": "UVIC FRESHIES",
     "name": "test",
@@ -287,128 +264,22 @@ data = {
       "data": [
         {
           "object": "point",
-          "x": 6,
-          "y": 5
+          "x": 2,
+          "y": 15
         },
         {
           "object": "point",
-          "x": 7,
-          "y": 5
+          "x": 2,
+          "y": 14
         },
         {
           "object": "point",
-          "x": 8,
-          "y": 5
+          "x": 1,
+          "y": 14
         }
       ],
       "object": "list"
     }
-  }
-}
-data2 = {
-  "food": {
-    "data": [
-      {
-        "object": "point",
-        "x": 0,
-        "y": 9
-      }
-    ],
-    "object": "list"
-  },
-  "height": 20,
-  "id": 1,
-  "object": "world",
-  "snakes": {
-    "data": [
-      {
-        "body": {
-          "data": [
-            {
-              "object": "point",
-              "x": 13,
-              "y": 19
-            },
-            {
-              "object": "point",
-              "x": 13,
-              "y": 19
-            },
-            {
-              "object": "point",
-              "x": 13,
-              "y": 19
-            }
-          ],
-          "object": "list"
-        },
-        "health": 100,
-        "id": "58a0142f-4cd7-4d35-9b17-815ec8ff8e70",
-        "length": 3,
-        "name": "Sonic Snake",
-        "object": "snake",
-        "taunt": "Gotta go fast"
-      },
-      {
-        "body": {
-          "data": [
-            {
-              "object": "point",
-              "x": 8,
-              "y": 15
-            },
-            {
-              "object": "point",
-              "x": 8,
-              "y": 15
-            },
-            {
-              "object": "point",
-              "x": 8,
-              "y": 15
-            }
-          ],
-          "object": "list"
-        },
-        "health": 100,
-        "id": "48ca23a2-dde8-4d0f-b03a-61cc9780427e",
-        "length": 3,
-        "name": "Typescript Snake",
-        "object": "snake",
-        "taunt": ""
-      }
-    ],
-    "object": "list"
-  },
-  "turn": 0,
-  "width": 20,
-  "you": {
-    "body": {
-      "data": [
-        {
-          "object": "point",
-          "x": 8,
-          "y": 15
-        },
-        {
-          "object": "point",
-          "x": 8,
-          "y": 15
-        },
-        {
-          "object": "point",
-          "x": 8,
-          "y": 15
-        }
-      ],
-      "object": "list"
-    },
-    "health": 100,
-    "id": "48ca23a2-dde8-4d0f-b03a-61cc9780427e",
-    "length": 3,
-    "name": "Typescript Snake",
-    "object": "snake",
-    "taunt": ""
   }
 }
 
