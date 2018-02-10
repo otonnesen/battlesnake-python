@@ -1,39 +1,205 @@
 from board import board
 data = {
-  "width": 20,
-  "height": 12,
-  "id": 62,
-  "turn": 37,
+  "width": 23,
+  "height": 22,
+  "id": 70,
+  "turn": 33,
   "snakes": {
     "data": [
       {
-        "id": "47b7c6cf-2160-478c-8a5a-c94fbd56bec8",
-        "health": 80,
-        "length": 4,
-        "taunt": "",
-        "name": "Guy Fieri",
+        "id": "49bd6da9-1970-41b1-8d99-c32c484b943b",
+        "health": 98,
+        "length": 11,
+        "taunt": "It's against my programming to impersonate a deity.",
+        "name": "snek v4",
         "object": "snake",
         "body": {
           "data": [
             {
               "object": "point",
-              "x": 1,
-              "y": 3
+              "x": 16,
+              "y": 17
             },
             {
               "object": "point",
-              "x": 1,
-              "y": 2
+              "x": 17,
+              "y": 17
             },
             {
               "object": "point",
-              "x": 1,
-              "y": 1
+              "x": 17,
+              "y": 16
+            },
+            {
+              "object": "point",
+              "x": 16,
+              "y": 16
+            },
+            {
+              "object": "point",
+              "x": 16,
+              "y": 15
+            },
+            {
+              "object": "point",
+              "x": 16,
+              "y": 14
+            },
+            {
+              "object": "point",
+              "x": 16,
+              "y": 13
+            },
+            {
+              "object": "point",
+              "x": 17,
+              "y": 13
+            },
+            {
+              "object": "point",
+              "x": 17,
+              "y": 12
+            },
+            {
+              "object": "point",
+              "x": 16,
+              "y": 12
+            },
+            {
+              "object": "point",
+              "x": 16,
+              "y": 11
+            }
+          ],
+          "object": "list"
+        }
+      },
+      {
+        "id": "ed6bf75a-a3f6-4454-9391-6cec6d3b520b",
+        "health": 99,
+        "length": 9,
+        "taunt": "Ready, player 1.",
+        "name": "D.Va",
+        "object": "snake",
+        "body": {
+          "data": [
+            {
+              "object": "point",
+              "x": 3,
+              "y": 12
+            },
+            {
+              "object": "point",
+              "x": 3,
+              "y": 13
             },
             {
               "object": "point",
               "x": 2,
-              "y": 1
+              "y": 13
+            },
+            {
+              "object": "point",
+              "x": 2,
+              "y": 14
+            },
+            {
+              "object": "point",
+              "x": 3,
+              "y": 14
+            },
+            {
+              "object": "point",
+              "x": 4,
+              "y": 14
+            },
+            {
+              "object": "point",
+              "x": 4,
+              "y": 13
+            },
+            {
+              "object": "point",
+              "x": 4,
+              "y": 12
+            },
+            {
+              "object": "point",
+              "x": 5,
+              "y": 12
+            }
+          ],
+          "object": "list"
+        }
+      },
+      {
+        "id": "95cdc21c-b70e-4cef-8bac-fc08722282ea",
+        "health": 98,
+        "length": 12,
+        "taunt": 70,
+        "name": "black mamba",
+        "object": "snake",
+        "body": {
+          "data": [
+            {
+              "object": "point",
+              "x": 4,
+              "y": 3
+            },
+            {
+              "object": "point",
+              "x": 4,
+              "y": 2
+            },
+            {
+              "object": "point",
+              "x": 5,
+              "y": 2
+            },
+            {
+              "object": "point",
+              "x": 6,
+              "y": 2
+            },
+            {
+              "object": "point",
+              "x": 6,
+              "y": 3
+            },
+            {
+              "object": "point",
+              "x": 6,
+              "y": 4
+            },
+            {
+              "object": "point",
+              "x": 7,
+              "y": 4
+            },
+            {
+              "object": "point",
+              "x": 8,
+              "y": 4
+            },
+            {
+              "object": "point",
+              "x": 8,
+              "y": 3
+            },
+            {
+              "object": "point",
+              "x": 9,
+              "y": 3
+            },
+            {
+              "object": "point",
+              "x": 10,
+              "y": 3
+            },
+            {
+              "object": "point",
+              "x": 10,
+              "y": 2
             }
           ],
           "object": "list"
@@ -41,7 +207,7 @@ data = {
       },
       {
         "id": "c3e89743-fbdd-465b-8208-45ea0919b05a",
-        "health": 95,
+        "health": 77,
         "length": 5,
         "taunt": "v1",
         "name": "test",
@@ -50,28 +216,86 @@ data = {
           "data": [
             {
               "object": "point",
+              "x": 22,
+              "y": 21
+            },
+            {
+              "object": "point",
+              "x": 21,
+              "y": 21
+            },
+            {
+              "object": "point",
+              "x": 20,
+              "y": 21
+            },
+            {
+              "object": "point",
               "x": 19,
-              "y": 11
+              "y": 21
             },
             {
               "object": "point",
               "x": 18,
-              "y": 11
+              "y": 21
+            }
+          ],
+          "object": "list"
+        }
+      },
+      {
+        "id": "d9dfce32-6614-4d52-aebe-71686ac46329",
+        "health": 100,
+        "length": 9,
+        "taunt": "Lil B Big Snake",
+        "name": "P = NP",
+        "object": "snake",
+        "body": {
+          "data": [
+            {
+              "object": "point",
+              "x": 14,
+              "y": 19
             },
             {
               "object": "point",
-              "x": 17,
-              "y": 11
+              "x": 14,
+              "y": 18
             },
             {
               "object": "point",
-              "x": 16,
-              "y": 11
+              "x": 14,
+              "y": 17
             },
             {
               "object": "point",
-              "x": 15,
-              "y": 11
+              "x": 14,
+              "y": 16
+            },
+            {
+              "object": "point",
+              "x": 14,
+              "y": 15
+            },
+            {
+              "object": "point",
+              "x": 13,
+              "y": 15
+            },
+            {
+              "object": "point",
+              "x": 12,
+              "y": 15
+            },
+            {
+              "object": "point",
+              "x": 11,
+              "y": 15
+            },
+            {
+              "object": "point",
+              "x": 11,
+              "y": 15
             }
           ],
           "object": "list"
@@ -84,83 +308,133 @@ data = {
     "data": [
       {
         "object": "point",
-        "x": 18,
-        "y": 4
+        "x": 22,
+        "y": 7
       },
       {
         "object": "point",
-        "x": 4,
+        "x": 11,
+        "y": 0
+      },
+      {
+        "object": "point",
+        "x": 2,
         "y": 8
       },
       {
         "object": "point",
-        "x": 15,
+        "x": 3,
         "y": 5
       },
       {
         "object": "point",
-        "x": 7,
-        "y": 8
-      },
-      {
-        "object": "point",
-        "x": 17,
-        "y": 10
-      },
-      {
-        "object": "point",
-        "x": 5,
-        "y": 3
-      },
-      {
-        "object": "point",
-        "x": 13,
-        "y": 0
-      },
-      {
-        "object": "point",
-        "x": 10,
-        "y": 0
-      },
-      {
-        "object": "point",
-        "x": 15,
+        "x": 20,
         "y": 6
       },
       {
         "object": "point",
-        "x": 17,
-        "y": 7
-      },
-      {
-        "object": "point",
-        "x": 4,
-        "y": 0
-      },
-      {
-        "object": "point",
-        "x": 5,
-        "y": 11
-      },
-      {
-        "object": "point",
-        "x": 14,
-        "y": 2
-      },
-      {
-        "object": "point",
-        "x": 9,
-        "y": 8
-      },
-      {
-        "object": "point",
-        "x": 13,
-        "y": 7
+        "x": 3,
+        "y": 10
       },
       {
         "object": "point",
         "x": 1,
+        "y": 11
+      },
+      {
+        "object": "point",
+        "x": 3,
         "y": 4
+      },
+      {
+        "object": "point",
+        "x": 3,
+        "y": 18
+      },
+      {
+        "object": "point",
+        "x": 8,
+        "y": 6
+      },
+      {
+        "object": "point",
+        "x": 0,
+        "y": 8
+      },
+      {
+        "object": "point",
+        "x": 6,
+        "y": 6
+      },
+      {
+        "object": "point",
+        "x": 4,
+        "y": 7
+      },
+      {
+        "object": "point",
+        "x": 19,
+        "y": 1
+      },
+      {
+        "object": "point",
+        "x": 4,
+        "y": 4
+      },
+      {
+        "object": "point",
+        "x": 0,
+        "y": 2
+      },
+      {
+        "object": "point",
+        "x": 2,
+        "y": 10
+      },
+      {
+        "object": "point",
+        "x": 21,
+        "y": 19
+      },
+      {
+        "object": "point",
+        "x": 3,
+        "y": 3
+      },
+      {
+        "object": "point",
+        "x": 2,
+        "y": 9
+      },
+      {
+        "object": "point",
+        "x": 14,
+        "y": 12
+      },
+      {
+        "object": "point",
+        "x": 16,
+        "y": 4
+      },
+      {
+        "object": "point",
+        "x": 0,
+        "y": 6
+      },
+      {
+        "object": "point",
+        "x": 9,
+        "y": 20
+      },
+      {
+        "object": "point",
+        "x": 5,
+        "y": 0
+      },
+      {
+        "object": "point",
+        "x": 9,
+        "y": 11
       }
     ],
     "object": "list"
@@ -169,8 +443,36 @@ data = {
   "dead_snakes": {
     "data": [
       {
+        "id": "f53852c5-ad90-479b-874f-d2799d98c48a",
+        "health": 98,
+        "length": 3,
+        "taunt": "right, down",
+        "name": "hmm",
+        "object": "snake",
+        "body": {
+          "data": [
+            {
+              "object": "point",
+              "x": 7,
+              "y": 3
+            },
+            {
+              "object": "point",
+              "x": 6,
+              "y": 3
+            },
+            {
+              "object": "point",
+              "x": 7,
+              "y": 3
+            }
+          ],
+          "object": "list"
+        }
+      },
+      {
         "id": "a9a2f79e-f6d0-4bd0-9531-b36cfa9de050",
-        "health": 99,
+        "health": 98,
         "length": 3,
         "taunt": "battlesnake-python!",
         "name": "squatchy-snake-2018",
@@ -179,102 +481,18 @@ data = {
           "data": [
             {
               "object": "point",
-              "x": 0,
-              "y": 12
+              "x": 21,
+              "y": 17
             },
             {
               "object": "point",
-              "x": 0,
-              "y": 11
+              "x": 20,
+              "y": 17
             },
             {
               "object": "point",
-              "x": 0,
-              "y": 11
-            }
-          ],
-          "object": "list"
-        }
-      },
-      {
-        "id": "1586a251-ecdf-414b-90dd-e0e75a05abcc",
-        "health": 94,
-        "length": 3,
-        "taunt": "TIMED OUT",
-        "name": "BaffleSnake0.1",
-        "object": "snake",
-        "body": {
-          "data": [
-            {
-              "object": "point",
-              "x": 0,
-              "y": -1
-            },
-            {
-              "object": "point",
-              "x": 0,
-              "y": 0
-            },
-            {
-              "object": "point",
-              "x": 0,
-              "y": 1
-            }
-          ],
-          "object": "list"
-        }
-      },
-      {
-        "id": "f53852c5-ad90-479b-874f-d2799d98c48a",
-        "health": 94,
-        "length": 3,
-        "taunt": "down, left",
-        "name": "hmm",
-        "object": "snake",
-        "body": {
-          "data": [
-            {
-              "object": "point",
-              "x": 10,
-              "y": 5
-            },
-            {
-              "object": "point",
-              "x": 10,
-              "y": 4
-            },
-            {
-              "object": "point",
-              "x": 10,
-              "y": 5
-            }
-          ],
-          "object": "list"
-        }
-      },
-      {
-        "id": "d159f700-e06a-4195-a1f9-8dccdfe56e7f",
-        "health": 92,
-        "length": 3,
-        "taunt": "Outta my way, snake!",
-        "name": "FooSnake",
-        "object": "snake",
-        "body": {
-          "data": [
-            {
-              "object": "point",
-              "x": 12,
-              "y": -1
-            },
-            {
-              "object": "point",
-              "x": 12,
-              "y": 0
-            },
-            {
-              "object": "point",
-              "x": 12,
-              "y": 1
+              "x": 19,
+              "y": 17
             }
           ],
           "object": "list"
@@ -285,7 +503,7 @@ data = {
   },
   "you": {
     "id": "c3e89743-fbdd-465b-8208-45ea0919b05a",
-    "health": 95,
+    "health": 77,
     "length": 5,
     "taunt": "v1",
     "name": "test",
@@ -294,28 +512,28 @@ data = {
       "data": [
         {
           "object": "point",
+          "x": 22,
+          "y": 21
+        },
+        {
+          "object": "point",
+          "x": 21,
+          "y": 21
+        },
+        {
+          "object": "point",
+          "x": 20,
+          "y": 21
+        },
+        {
+          "object": "point",
           "x": 19,
-          "y": 11
+          "y": 21
         },
         {
           "object": "point",
           "x": 18,
-          "y": 11
-        },
-        {
-          "object": "point",
-          "x": 17,
-          "y": 11
-        },
-        {
-          "object": "point",
-          "x": 16,
-          "y": 11
-        },
-        {
-          "object": "point",
-          "x": 15,
-          "y": 11
+          "y": 21
         }
       ],
       "object": "list"
