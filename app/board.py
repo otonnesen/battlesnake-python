@@ -88,32 +88,35 @@ class board ():
     """
     def checkWalls(self):
         not_moves = []
-        if (self.snake_head['x'] <= 1):
+        if (self.snake_head['x'] == 0):
             not_moves.append('left')
-        elif (self.snake_head['x'] >= self.width):
+        elif (self.snake_head['x'] == self.width-1):
             not_moves.append('right')
         
-        if (self.snake_head['y'] <= 0):
+        if (self.snake_head['y'] == 0):
             not_moves.append('up')
-        elif (self.snake_head['y'] >= self.height):
+        elif (self.snake_head['y'] == self.height-1):
             not_moves.append('down')
         
         return not_moves
 
     def checkSnakes(self):
         not_moves = []
-        right = self.board[self.snake_head['x'] + 1][self.snake_head['y']]
-        left = self.board[self.snake_head['x'] - 1][self.snake_head['y']]
-        down = self.board[self.snake_head['x']][self.snake_head['y'] + 1]
-        up = self.board[self.snake_head['x']][self.snake_head['y'] - 1]
-        if right == 3 or right == 5:
-            not_moves.append('right')
-        if left == 3 or left == 5:
-            not_moves.append('left')
-        if up == 3 or up == 5:
-            not_moves.append('up')
-        if down == 3 or down == 5:
-            not_moves.append('down')
+        if self.snake_head['x']+1 < self.width and self.snake_head['x']-1 > 0: 
+            right = self.board[self.snake_head['x'] + 1][self.snake_head['y']]
+            left = self.board[self.snake_head['x'] - 1][self.snake_head['y']]
+            if right == 3 or right == 5:
+                not_moves.append('right')
+            if left == 3 or left == 5:
+                not_moves.append('left')
+        
+        if self.snake_head['y']+1 < self.height and self.snake_head['y']-1 > 0:
+            down = self.board[self.snake_head['x']][self.snake_head['y'] + 1]
+            up = self.board[self.snake_head['x']][self.snake_head['y'] - 1]
+            if up == 3 or up == 5:
+                not_moves.append('up')
+            if down == 3 or down == 5:
+                not_moves.append('down')
         return not_moves
         
 
