@@ -107,10 +107,13 @@ class board ():
     def check(self): # we can keep adding to this
         moves = ['up', 'down', 'left', 'right']
         not_moves = []
+        # these are moves we absolutly cannot make so we won't even consider them
+        # instead we take our chances
         not_moves = not_moves + self.checkWalls()
-        not_moves = not_moves + self.checkSnakes()
+        moves = list(set(moves).difference(not_moves))
+        moves = self.checkSnakes(moves)
         #not_moves.append(self.checkSnakes())
-        return list(set(moves).difference(not_moves))
+        return moves
 
     """
     tells us where walls are
@@ -132,32 +135,49 @@ class board ():
     """
     checks for collisions with snakes
     """
-    def checkSnakes(self): # needs to be redone
-        not_moves = []
+    def checkSnakes(self, moves): # needs to be redone
+        best_moves = [('move'), 100]
         """
-        if were not going to look out of bounds
-            look one above, below, or beside our snakes head
-            and if that is a dangerous block dont go there
+        look at each option and if you have a better option were going to take it
+        but if you have the same value option random
+        if you have a worse option then do nothing
         """
         if self.snake_head['x']+1 < self.width: 
             right = self.board[self.snake_head['x'] + 1][self.snake_head['y']]
-            if right == 3 or right == 5:
-                not_moves.append('right')
+            for move in best_moves:
+                if right < move[1]:
+                    best_moves = []
+                    best_moves.append('right', right)
+                elif right == move[1]:
+                    best_moves.append('right', right)
 
         if self.snake_head['x']-1 >= 0:
             left = self.board[self.snake_head['x'] - 1][self.snake_head['y']]
-            if left == 3 or left == 5:
-                not_moves.append('left')
+            for move in best_moves:
+                if left < move[1]:
+                    best_moves = []
+                    best_moves.append('left', left)
+                elif left == move[1]:
+                    best_moves.append('left', left)
         
         if self.snake_head['y']+1 < self.height:
             down = self.board[self.snake_head['x']][self.snake_head['y'] + 1]
-            if down == 3 or down == 5:
-                not_moves.append('down')
+            for move in best_moves:
+                if down < move[1]:
+                    best_moves = []
+                    best_moves.append('down', down)
+                elif down == move[1]:
+                    best_moves.append('down', down)
 
-        if self.snake_head['y']-1 >= 0:
+        if self.snake_head['y']-1 >= self.height:
             up = self.board[self.snake_head['x']][self.snake_head['y'] - 1]
-            if up == 3 or up == 5:
-                not_moves.append('up')
+            for move in best_moves:
+                if up < move[1]:
+                    best_moves = []
+                    best_moves.append('up', up)
+                elif up == move[1]:
+                    best_moves.append('up', up)
+        
 
         return not_moves
         
@@ -169,4 +189,3 @@ class board ():
 
     def run(self):
         self.Snakes(self.other_snakes)
-        self.plotSelf()
