@@ -115,7 +115,7 @@ class board ():
             if right == 3 or right == 5:
                 not_moves.append('right')
 
-        if self.snake_head['x']-1 > 0:
+        if self.snake_head['x']-1 >= 0:
             left = self.board[self.snake_head['x'] - 1][self.snake_head['y']]
             if left == 3 or left == 5:
                 not_moves.append('left')
@@ -125,7 +125,7 @@ class board ():
             if down == 3 or down == 5:
                 not_moves.append('down')
 
-        if self.snake_head['y']-1 > 0:
+        if self.snake_head['y']-1 >= 0:
             up = self.board[self.snake_head['x']][self.snake_head['y'] - 1]
             if up == 3 or up == 5:
                 not_moves.append('up')
