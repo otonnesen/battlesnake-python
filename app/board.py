@@ -52,6 +52,14 @@ class board ():
                 self.plot(coord['x'], coord['y'], 3)
 
     """
+    adds our own snake on the map
+    """
+    def plotSelf(self):
+        for bodypart in self.snake['body']['data']:
+            self.plot(bodypart['x'], bodypart['y'], 5)
+        
+
+    """
     function to clear the board at the end of the turn
     """
     def clear(self):
@@ -71,6 +79,7 @@ class board ():
         moves = ['up', 'down', 'left', 'right']
         not_moves = []
         not_moves = not_moves + self.checkWalls()
+        not_moves = not_moves + self.checkSnakes()
         #not_moves.append(self.checkSnakes())
         return list(set(moves).difference(not_moves))
 
@@ -92,7 +101,22 @@ class board ():
         return not_moves
 
     def checkSnakes(self):
-        pass
+        not_moves = []
+        right = self.board[self.snake_head['x'] + 1][self.snake_head['y']]
+        left = self.board[self.snake_head['x'] - 1][self.snake_head['y']]
+        down = self.board[self.snake_head['x']][self.snake_head['y'] + 1]
+        up = self.board[self.snake_head['x']][self.snake_head['y'] - 1]
+        if right == 3 or right == 5:
+            not_moves.append('right')
+        if left == 3 or left == 5:
+            not_moves.append('left')
+        if up == 3 or up == 5:
+            not_moves.append('up')
+        if down == 3 or down == 5:
+            not_moves.append('down')
+        return not_moves
+        
+
 
     def plot(self, x, y, num):
         if (x < self.width and x >= 0) and (y < self.height and y >= 0):
