@@ -779,15 +779,6 @@ for y in range(0, game.height):
     print row
     row = []
 
-print 'testing self plot:'
-game.plotSelf()
-row = []
-for y in range(0, game.height):
-    for x in range(0, game.width):
-        row.append(game.board[x][y])
-    print row
-    row = []
-
 print 'checking walls should return down', game.checkWalls()
 print 'checking snake part', game.checkSnakes()
 print 'check should return all directions:', game.check()

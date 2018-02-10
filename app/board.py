@@ -86,16 +86,8 @@ class board ():
                 self.plot(snake['body']['data'][0]['x'], snake['body']['data'][0]['y'] - 1, -2)
             
             for coord in snake['body']['data']:
-                self.plot(coord['x'], coord['y'], 4)
-
-    """
-    adds our own snake on the map
-    """
-    def plotSelf(self): # this might not be needed
-        for bodypart in self.snake['body']['data']:
-            self.plot(bodypart['x'], bodypart['y'], 5)
+                self.plot(coord['x'], coord['y'], 5)
         
-
     """
     function to clear the board at the end of the turn
     """
