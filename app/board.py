@@ -34,6 +34,17 @@ class board ():
         {00452550}
         {00050000}
         {00050000}
+    case 6: there is a snake that will kill us and a food partical there
+            so 4 + (-3) +4 which is 5 so we wouldn't take that route unless we had too
+        {00040000}
+        {00455555}
+        {00050000}
+        {00000000}
+    case 7: there is a snake we could kill and food 4 + (-2) + (-3)
+        {00040000}
+        {0045-1550}
+        {00050000}
+        {00050000}
     {
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -64,10 +75,10 @@ class board ():
         for snake in snakes['data']:
             # if the snake will kill us on collision put a one where it can be
             if snake['length'] >= self.snake['length']:
-                self.plot(snake['body']['data'][0]['x'] + 1, snake['body']['data'][0]['y'], 3)
-                self.plot(snake['body']['data'][0]['x'] - 1, snake['body']['data'][0]['y'], 3)
-                self.plot(snake['body']['data'][0]['x'], snake['body']['data'][0]['y'] + 1, 3)
-                self.plot(snake['body']['data'][0]['x'], snake['body']['data'][0]['y'] - 1, 3)
+                self.plot(snake['body']['data'][0]['x'] + 1, snake['body']['data'][0]['y'], 4)
+                self.plot(snake['body']['data'][0]['x'] - 1, snake['body']['data'][0]['y'], 4)
+                self.plot(snake['body']['data'][0]['x'], snake['body']['data'][0]['y'] + 1, 4)
+                self.plot(snake['body']['data'][0]['x'], snake['body']['data'][0]['y'] - 1, 4)
             else: # the snake will die on collision
                 self.plot(snake['body']['data'][0]['x'] + 1, snake['body']['data'][0]['y'], -2)
                 self.plot(snake['body']['data'][0]['x'] - 1, snake['body']['data'][0]['y'], -2)
@@ -162,7 +173,7 @@ class board ():
 
     def plot(self, x, y, num): # Done
         if (x < self.width and x >= 0) and (y < self.height and y >= 0):
-            self.board[x][y] = num
+            self.board[x][y] += num
 
     def run(self):
         self.Snakes(self.other_snakes)
