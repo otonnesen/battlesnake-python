@@ -100,8 +100,16 @@ class board ():
         
         return not_moves
 
+    """
+    checks for collisions with snakes
+    """
     def checkSnakes(self):
         not_moves = []
+        """
+        if were not going to look out of bounds
+            look one above, below, or beside our snakes head
+            and if that is a dangerous block dont go there
+        """
         if self.snake_head['x']+1 < self.width: 
             right = self.board[self.snake_head['x'] + 1][self.snake_head['y']]
             if right == 3 or right == 5:
