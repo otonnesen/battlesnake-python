@@ -58,7 +58,7 @@ def move():
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
-    animations = ['<(o,o)>', '<(O.o)>', '<(o.O)>', '<(O.O)>']
+    animations = ['<(o.o)>', '<(O.o)>', '<(o.O)>', '<(O.O)>']
     return {
         'move': random.choice(moves),
         'taunt': random.choice(animations)
