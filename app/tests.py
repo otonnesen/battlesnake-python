@@ -244,6 +244,7 @@ for y in range(0, game.height):
     print row
     row = []
 
-print 'checking walls should return down', game.checkWalls()
-print 'checking snake part', game.checkSnakes()
-print 'check should return all directions:', game.check()
+n = game.checkWalls()
+print 'checking walls should return down', n
+print 'checking snake part this returns moves', game.checkSnakes(n)
+print 'check should return possible directions:', game.check()

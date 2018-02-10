@@ -136,50 +136,59 @@ class board ():
     checks for collisions with snakes
     """
     def checkSnakes(self, moves): # needs to be redone
-        best_moves = [('move'), 100]
+        best_moves = [('move', 100)]
         """
         look at each option and if you have a better option were going to take it
         but if you have the same value option random
         if you have a worse option then do nothing
         """
+
         if self.snake_head['x']+1 < self.width: 
             right = self.board[self.snake_head['x'] + 1][self.snake_head['y']]
-            for move in best_moves:
-                if right < move[1]:
+            for move, val in best_moves:
+                if right < val:
                     best_moves = []
-                    best_moves.append('right', right)
-                elif right == move[1]:
-                    best_moves.append('right', right)
+                    best_moves.append(('right', right))
+                    break
+                elif right == val:
+                    best_moves.append(('right', right))
+                    break
 
         if self.snake_head['x']-1 >= 0:
             left = self.board[self.snake_head['x'] - 1][self.snake_head['y']]
-            for move in best_moves:
-                if left < move[1]:
+            for move, val in best_moves:
+                if left < val:
                     best_moves = []
-                    best_moves.append('left', left)
-                elif left == move[1]:
-                    best_moves.append('left', left)
+                    best_moves.append(('left', left))
+                    break
+                elif left == val:
+                    best_moves.append(('left', left))
+                    break
         
         if self.snake_head['y']+1 < self.height:
             down = self.board[self.snake_head['x']][self.snake_head['y'] + 1]
-            for move in best_moves:
-                if down < move[1]:
+            for move, val in best_moves:
+                if down < val:
                     best_moves = []
-                    best_moves.append('down', down)
-                elif down == move[1]:
-                    best_moves.append('down', down)
+                    best_moves.append(('down', down))
+                    break
+                elif down == val:
+                    best_moves.append(('down', down))
+                    break
 
         if self.snake_head['y']-1 >= self.height:
             up = self.board[self.snake_head['x']][self.snake_head['y'] - 1]
-            for move in best_moves:
-                if up < move[1]:
+            for move, val in best_moves:
+                if up < val:
                     best_moves = []
-                    best_moves.append('up', up)
-                elif up == move[1]:
-                    best_moves.append('up', up)
+                    best_moves.append(('up', up))
+                    break
+                elif up == val:
+                    best_moves.append(('up', up))
+                    break
         
 
-        return not_moves
+        return best_moves
         
 
 
