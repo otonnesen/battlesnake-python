@@ -23,7 +23,7 @@ class board ():
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
     }
     """
-    def __init__(self, width, height, us, snakes):
+    def __init__(self, width, height, us, snakes): # model needs reviewing
         self.board = [[0 for y in range(0, height)] for x in range(0, width)]
         self.width = width
         self.height = height
@@ -34,7 +34,7 @@ class board ():
     """
     function to add snakes the board
     """
-    def Snakes(self, snakes):
+    def Snakes(self, snakes): # needs redoing
         for snake in snakes['data']:
             # if the snake will kill us on collision put a one where it can be
             if snake['length'] >= self.snake['length']:
@@ -54,7 +54,7 @@ class board ():
     """
     adds our own snake on the map
     """
-    def plotSelf(self):
+    def plotSelf(self): # this might not be needed
         for bodypart in self.snake['body']['data']:
             self.plot(bodypart['x'], bodypart['y'], 5)
         
@@ -62,20 +62,20 @@ class board ():
     """
     function to clear the board at the end of the turn
     """
-    def clear(self):
+    def clear(self): # probably not needed becuase every request we remake the board
         pass
     
     """
     Function adds food to the board
     """
-    def food(self, food):
+    def food(self, food): 
         pass
 
     """
     Basically whats going to kill us? dont do that
     returns: a list of moves that wont kill us
     """
-    def check(self):
+    def check(self): # we can keep adding to this
         moves = ['up', 'down', 'left', 'right']
         not_moves = []
         not_moves = not_moves + self.checkWalls()
@@ -86,7 +86,7 @@ class board ():
     """
     tells us where walls are
     """
-    def checkWalls(self):
+    def checkWalls(self): # Done
         not_moves = []
         if (self.snake_head['x'] == 0):
             not_moves.append('left')
@@ -103,7 +103,7 @@ class board ():
     """
     checks for collisions with snakes
     """
-    def checkSnakes(self):
+    def checkSnakes(self): # needs to be redone
         not_moves = []
         """
         if were not going to look out of bounds
@@ -134,7 +134,7 @@ class board ():
         
 
 
-    def plot(self, x, y, num):
+    def plot(self, x, y, num): # Done
         if (x < self.width and x >= 0) and (y < self.height and y >= 0):
             self.board[x][y] = num
 
