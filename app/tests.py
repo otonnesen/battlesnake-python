@@ -3,61 +3,66 @@ data = {
   "width": 22,
   "height": 21,
   "id": 337,
-  "turn": 174,
+  "turn": 207,
   "snakes": {
     "data": [
       {
         "id": "c3e89743-fbdd-465b-8208-45ea0919b05a",
-        "health": 82,
-        "length": 9,
-        "taunt": "<(O.o)>",
+        "health": 95,
+        "length": 10,
+        "taunt": "<(o,o)>",
         "name": "test",
         "object": "snake",
         "body": {
           "data": [
             {
               "object": "point",
-              "x": 14,
-              "y": 10
-            },
-            {
-              "object": "point",
-              "x": 15,
-              "y": 10
-            },
-            {
-              "object": "point",
-              "x": 15,
-              "y": 9
-            },
-            {
-              "object": "point",
-              "x": 15,
+              "x": 11,
               "y": 8
             },
             {
               "object": "point",
-              "x": 15,
+              "x": 10,
+              "y": 8
+            },
+            {
+              "object": "point",
+              "x": 9,
+              "y": 8
+            },
+            {
+              "object": "point",
+              "x": 9,
               "y": 7
             },
             {
               "object": "point",
-              "x": 16,
+              "x": 8,
               "y": 7
             },
             {
               "object": "point",
-              "x": 17,
-              "y": 7
+              "x": 8,
+              "y": 6
             },
             {
               "object": "point",
-              "x": 18,
-              "y": 7
+              "x": 8,
+              "y": 5
             },
             {
               "object": "point",
-              "x": 18,
+              "x": 9,
+              "y": 5
+            },
+            {
+              "object": "point",
+              "x": 10,
+              "y": 5
+            },
+            {
+              "object": "point",
+              "x": 10,
               "y": 6
             }
           ],
@@ -66,8 +71,8 @@ data = {
       },
       {
         "id": "b641a726-5143-451f-beb6-377b14e1dad5",
-        "health": 98,
-        "length": 12,
+        "health": 92,
+        "length": 15,
         "taunt": "I am under construction!",
         "name": "Protosnake",
         "object": "snake",
@@ -75,63 +80,78 @@ data = {
           "data": [
             {
               "object": "point",
-              "x": 2,
-              "y": 10
-            },
-            {
-              "object": "point",
-              "x": 2,
-              "y": 11
-            },
-            {
-              "object": "point",
-              "x": 2,
-              "y": 12
-            },
-            {
-              "object": "point",
-              "x": 3,
-              "y": 12
-            },
-            {
-              "object": "point",
-              "x": 3,
-              "y": 13
-            },
-            {
-              "object": "point",
-              "x": 4,
-              "y": 13
-            },
-            {
-              "object": "point",
-              "x": 4,
-              "y": 12
-            },
-            {
-              "object": "point",
-              "x": 4,
-              "y": 11
-            },
-            {
-              "object": "point",
-              "x": 4,
-              "y": 10
-            },
-            {
-              "object": "point",
-              "x": 4,
-              "y": 9
-            },
-            {
-              "object": "point",
-              "x": 4,
-              "y": 8
-            },
-            {
-              "object": "point",
-              "x": 4,
+              "x": 12,
               "y": 7
+            },
+            {
+              "object": "point",
+              "x": 12,
+              "y": 6
+            },
+            {
+              "object": "point",
+              "x": 12,
+              "y": 5
+            },
+            {
+              "object": "point",
+              "x": 12,
+              "y": 4
+            },
+            {
+              "object": "point",
+              "x": 11,
+              "y": 4
+            },
+            {
+              "object": "point",
+              "x": 11,
+              "y": 3
+            },
+            {
+              "object": "point",
+              "x": 11,
+              "y": 2
+            },
+            {
+              "object": "point",
+              "x": 11,
+              "y": 1
+            },
+            {
+              "object": "point",
+              "x": 10,
+              "y": 1
+            },
+            {
+              "object": "point",
+              "x": 9,
+              "y": 1
+            },
+            {
+              "object": "point",
+              "x": 9,
+              "y": 2
+            },
+            {
+              "object": "point",
+              "x": 9,
+              "y": 3
+            },
+            {
+              "object": "point",
+              "x": 9,
+              "y": 4
+            },
+            {
+              "object": "point",
+              "x": 8,
+              "y": 4
+            },
+            {
+              "object": "point",
+              "x": 7,
+              "y": 4
             }
           ],
           "object": "list"
@@ -139,13 +159,178 @@ data = {
       },
       {
         "id": "49bd6da9-1970-41b1-8d99-c32c484b943b",
-        "health": 99,
-        "length": 36,
-        "taunt": "It's worse.",
+        "health": 100,
+        "length": 47,
+        "taunt": "The circle is now complete.",
         "name": "snek v4",
         "object": "snake",
         "body": {
           "data": [
+            {
+              "object": "point",
+              "x": 0,
+              "y": 5
+            },
+            {
+              "object": "point",
+              "x": 0,
+              "y": 6
+            },
+            {
+              "object": "point",
+              "x": 0,
+              "y": 7
+            },
+            {
+              "object": "point",
+              "x": 0,
+              "y": 8
+            },
+            {
+              "object": "point",
+              "x": 0,
+              "y": 9
+            },
+            {
+              "object": "point",
+              "x": 0,
+              "y": 10
+            },
+            {
+              "object": "point",
+              "x": 0,
+              "y": 11
+            },
+            {
+              "object": "point",
+              "x": 1,
+              "y": 11
+            },
+            {
+              "object": "point",
+              "x": 2,
+              "y": 11
+            },
+            {
+              "object": "point",
+              "x": 2,
+              "y": 12
+            },
+            {
+              "object": "point",
+              "x": 3,
+              "y": 12
+            },
+            {
+              "object": "point",
+              "x": 4,
+              "y": 12
+            },
+            {
+              "object": "point",
+              "x": 5,
+              "y": 12
+            },
+            {
+              "object": "point",
+              "x": 5,
+              "y": 11
+            },
+            {
+              "object": "point",
+              "x": 4,
+              "y": 11
+            },
+            {
+              "object": "point",
+              "x": 3,
+              "y": 11
+            },
+            {
+              "object": "point",
+              "x": 3,
+              "y": 10
+            },
+            {
+              "object": "point",
+              "x": 3,
+              "y": 9
+            },
+            {
+              "object": "point",
+              "x": 3,
+              "y": 8
+            },
+            {
+              "object": "point",
+              "x": 2,
+              "y": 8
+            },
+            {
+              "object": "point",
+              "x": 2,
+              "y": 7
+            },
+            {
+              "object": "point",
+              "x": 2,
+              "y": 6
+            },
+            {
+              "object": "point",
+              "x": 3,
+              "y": 6
+            },
+            {
+              "object": "point",
+              "x": 4,
+              "y": 6
+            },
+            {
+              "object": "point",
+              "x": 5,
+              "y": 6
+            },
+            {
+              "object": "point",
+              "x": 6,
+              "y": 6
+            },
+            {
+              "object": "point",
+              "x": 7,
+              "y": 6
+            },
+            {
+              "object": "point",
+              "x": 7,
+              "y": 7
+            },
+            {
+              "object": "point",
+              "x": 6,
+              "y": 7
+            },
+            {
+              "object": "point",
+              "x": 6,
+              "y": 8
+            },
+            {
+              "object": "point",
+              "x": 6,
+              "y": 9
+            },
+            {
+              "object": "point",
+              "x": 6,
+              "y": 10
+            },
+            {
+              "object": "point",
+              "x": 6,
+              "y": 11
+            },
             {
               "object": "point",
               "x": 6,
@@ -213,23 +398,41 @@ data = {
             },
             {
               "object": "point",
+              "x": 12,
+              "y": 10
+            }
+          ],
+          "object": "list"
+        }
+      },
+      {
+        "id": "8963f146-bd4d-4df1-96d2-eaa5725f2e11",
+        "health": 90,
+        "length": 19,
+        "taunt": "Gotta _GO_ fast",
+        "name": "Snakedown Challenger Bot 1",
+        "object": "snake",
+        "body": {
+          "data": [
+            {
+              "object": "point",
               "x": 13,
               "y": 10
             },
             {
               "object": "point",
-              "x": 13,
-              "y": 11
-            },
-            {
-              "object": "point",
               "x": 14,
-              "y": 11
+              "y": 10
             },
             {
               "object": "point",
               "x": 15,
-              "y": 11
+              "y": 10
+            },
+            {
+              "object": "point",
+              "x": 16,
+              "y": 10
             },
             {
               "object": "point",
@@ -238,191 +441,73 @@ data = {
             },
             {
               "object": "point",
-              "x": 17,
-              "y": 11
-            },
-            {
-              "object": "point",
-              "x": 17,
-              "y": 10
-            },
-            {
-              "object": "point",
-              "x": 18,
-              "y": 10
-            },
-            {
-              "object": "point",
-              "x": 18,
-              "y": 11
-            },
-            {
-              "object": "point",
-              "x": 18,
+              "x": 16,
               "y": 12
             },
             {
               "object": "point",
-              "x": 18,
-              "y": 13
-            },
-            {
-              "object": "point",
-              "x": 18,
-              "y": 14
-            },
-            {
-              "object": "point",
-              "x": 18,
-              "y": 15
-            },
-            {
-              "object": "point",
-              "x": 18,
-              "y": 16
-            },
-            {
-              "object": "point",
-              "x": 18,
-              "y": 17
-            },
-            {
-              "object": "point",
-              "x": 18,
-              "y": 18
-            },
-            {
-              "object": "point",
-              "x": 18,
-              "y": 19
-            },
-            {
-              "object": "point",
-              "x": 18,
-              "y": 20
-            },
-            {
-              "object": "point",
               "x": 17,
-              "y": 20
-            },
-            {
-              "object": "point",
-              "x": 17,
-              "y": 19
-            },
-            {
-              "object": "point",
-              "x": 17,
-              "y": 18
-            },
-            {
-              "object": "point",
-              "x": 17,
-              "y": 17
-            },
-            {
-              "object": "point",
-              "x": 17,
-              "y": 16
-            }
-          ],
-          "object": "list"
-        }
-      },
-      {
-        "id": "8963f146-bd4d-4df1-96d2-eaa5725f2e11",
-        "health": 99,
-        "length": 17,
-        "taunt": "Gotta _GO_ fast",
-        "name": "Snakedown Challenger Bot 1",
-        "object": "snake",
-        "body": {
-          "data": [
-            {
-              "object": "point",
-              "x": 0,
-              "y": 16
-            },
-            {
-              "object": "point",
-              "x": 0,
-              "y": 15
-            },
-            {
-              "object": "point",
-              "x": 1,
-              "y": 15
-            },
-            {
-              "object": "point",
-              "x": 2,
-              "y": 15
-            },
-            {
-              "object": "point",
-              "x": 3,
-              "y": 15
-            },
-            {
-              "object": "point",
-              "x": 4,
-              "y": 15
-            },
-            {
-              "object": "point",
-              "x": 5,
-              "y": 15
-            },
-            {
-              "object": "point",
-              "x": 6,
-              "y": 15
-            },
-            {
-              "object": "point",
-              "x": 7,
-              "y": 15
-            },
-            {
-              "object": "point",
-              "x": 8,
-              "y": 15
-            },
-            {
-              "object": "point",
-              "x": 9,
-              "y": 15
-            },
-            {
-              "object": "point",
-              "x": 9,
-              "y": 14
-            },
-            {
-              "object": "point",
-              "x": 10,
-              "y": 14
-            },
-            {
-              "object": "point",
-              "x": 10,
-              "y": 13
-            },
-            {
-              "object": "point",
-              "x": 9,
-              "y": 13
-            },
-            {
-              "object": "point",
-              "x": 9,
               "y": 12
             },
             {
               "object": "point",
-              "x": 9,
-              "y": 11
+              "x": 17,
+              "y": 13
+            },
+            {
+              "object": "point",
+              "x": 17,
+              "y": 14
+            },
+            {
+              "object": "point",
+              "x": 17,
+              "y": 15
+            },
+            {
+              "object": "point",
+              "x": 16,
+              "y": 15
+            },
+            {
+              "object": "point",
+              "x": 16,
+              "y": 14
+            },
+            {
+              "object": "point",
+              "x": 16,
+              "y": 13
+            },
+            {
+              "object": "point",
+              "x": 15,
+              "y": 13
+            },
+            {
+              "object": "point",
+              "x": 14,
+              "y": 13
+            },
+            {
+              "object": "point",
+              "x": 13,
+              "y": 13
+            },
+            {
+              "object": "point",
+              "x": 13,
+              "y": 14
+            },
+            {
+              "object": "point",
+              "x": 13,
+              "y": 15
+            },
+            {
+              "object": "point",
+              "x": 13,
+              "y": 16
             }
           ],
           "object": "list"
@@ -435,18 +520,8 @@ data = {
     "data": [
       {
         "object": "point",
-        "x": 1,
-        "y": 8
-      },
-      {
-        "object": "point",
         "x": 21,
         "y": 1
-      },
-      {
-        "object": "point",
-        "x": 1,
-        "y": 11
       },
       {
         "object": "point",
@@ -460,33 +535,13 @@ data = {
       },
       {
         "object": "point",
-        "x": 0,
-        "y": 7
-      },
-      {
-        "object": "point",
-        "x": 0,
-        "y": 10
-      },
-      {
-        "object": "point",
         "x": 20,
         "y": 0
       },
       {
         "object": "point",
-        "x": 0,
-        "y": 5
-      },
-      {
-        "object": "point",
         "x": 2,
         "y": 4
-      },
-      {
-        "object": "point",
-        "x": 0,
-        "y": 11
       },
       {
         "object": "point",
@@ -520,33 +575,8 @@ data = {
       },
       {
         "object": "point",
-        "x": 3,
-        "y": 8
-      },
-      {
-        "object": "point",
-        "x": 2,
-        "y": 6
-      },
-      {
-        "object": "point",
-        "x": 10,
-        "y": 1
-      },
-      {
-        "object": "point",
-        "x": 2,
-        "y": 17
-      },
-      {
-        "object": "point",
         "x": 10,
         "y": 19
-      },
-      {
-        "object": "point",
-        "x": 4,
-        "y": 3
       },
       {
         "object": "point",
@@ -565,13 +595,68 @@ data = {
       },
       {
         "object": "point",
-        "x": 7,
+        "x": 1,
+        "y": 19
+      },
+      {
+        "object": "point",
+        "x": 0,
+        "y": 19
+      },
+      {
+        "object": "point",
+        "x": 0,
+        "y": 2
+      },
+      {
+        "object": "point",
+        "x": 6,
+        "y": 5
+      },
+      {
+        "object": "point",
+        "x": 20,
+        "y": 18
+      },
+      {
+        "object": "point",
+        "x": 20,
         "y": 7
       },
       {
         "object": "point",
-        "x": 16,
-        "y": 15
+        "x": 17,
+        "y": 4
+      },
+      {
+        "object": "point",
+        "x": 14,
+        "y": 4
+      },
+      {
+        "object": "point",
+        "x": 14,
+        "y": 8
+      },
+      {
+        "object": "point",
+        "x": 20,
+        "y": 12
+      },
+      {
+        "object": "point",
+        "x": 10,
+        "y": 17
+      },
+      {
+        "object": "point",
+        "x": 18,
+        "y": 11
+      },
+      {
+        "object": "point",
+        "x": 17,
+        "y": 1
       }
     ],
     "object": "list"
@@ -755,56 +840,61 @@ data = {
   },
   "you": {
     "id": "c3e89743-fbdd-465b-8208-45ea0919b05a",
-    "health": 82,
-    "length": 9,
-    "taunt": "<(O.o)>",
+    "health": 95,
+    "length": 10,
+    "taunt": "<(o,o)>",
     "name": "test",
     "object": "snake",
     "body": {
       "data": [
         {
           "object": "point",
-          "x": 14,
-          "y": 10
-        },
-        {
-          "object": "point",
-          "x": 15,
-          "y": 10
-        },
-        {
-          "object": "point",
-          "x": 15,
-          "y": 9
-        },
-        {
-          "object": "point",
-          "x": 15,
+          "x": 11,
           "y": 8
         },
         {
           "object": "point",
-          "x": 15,
+          "x": 10,
+          "y": 8
+        },
+        {
+          "object": "point",
+          "x": 9,
+          "y": 8
+        },
+        {
+          "object": "point",
+          "x": 9,
           "y": 7
         },
         {
           "object": "point",
-          "x": 16,
+          "x": 8,
           "y": 7
         },
         {
           "object": "point",
-          "x": 17,
-          "y": 7
+          "x": 8,
+          "y": 6
         },
         {
           "object": "point",
-          "x": 18,
-          "y": 7
+          "x": 8,
+          "y": 5
         },
         {
           "object": "point",
-          "x": 18,
+          "x": 9,
+          "y": 5
+        },
+        {
+          "object": "point",
+          "x": 10,
+          "y": 5
+        },
+        {
+          "object": "point",
+          "x": 10,
           "y": 6
         }
       ],
