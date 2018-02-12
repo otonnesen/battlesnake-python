@@ -1,3 +1,4 @@
+from __future__ import print_function
 class board ():
 
     """
@@ -67,6 +68,16 @@ class board ():
         self.snake = us
         self.snake_head = us['body']['data'][0]
         self.other_snakes = snakes
+
+    def __str__(self):
+        s = []
+        for i in range(self.height):
+            s.append('\n{')
+            for j in range(self.width-1):
+                s.append(str(self.board[j][i])+',')
+            s.append(str(self.board[i][-1])+'}')
+        return ''.join(s)
+
 
     """
     function to add snakes the board
