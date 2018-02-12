@@ -261,3 +261,5 @@ n = game.checkWalls()
 print 'checking walls should return down', n
 print 'checking snake part this returns moves', game.checkSnakes(n)
 print 'check should return possible directions:', game.check()
+
+#Verifying ability to commit 
