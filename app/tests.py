@@ -262,4 +262,6 @@ print 'checking walls should return down', n
 print 'checking snake part this returns moves', game.checkSnakes(n)
 print 'check should return possible directions:', game.check()
 
-#Verifying ability to commit 
+#Verifying ability to commit
+#^ -Mack
+#Test 2 as Mack, not root
