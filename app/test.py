@@ -5,11 +5,19 @@ data = json.load(open('data.json'))
 
 game_board = board(data['width'],data['height'],data['you'],data['snakes'])
 
+# Returns list of possible paths of length depth stemming from start
+# Still need to figure out what to actually do with the list, but most likely
+# something like use the first route in the list.
+# Possible additional features:
+#   Route towards food (A*)
+#   Don't use coordinates in more than one route
+#   Etc
+
 def pathFind(board, start, depth = 5):
     current = start
     tmp = []
-    stack = []
     for n in neighbors(start):
+        current = n
         for i in range(depth):
             for j in neighbors(current):
                 if(spaceOK(board, j)):
@@ -40,6 +48,6 @@ def spaceOK(board, coord):
             
     return True
 
-print({'x':14,'y':12})
-for i in pathFind(game_board, {'x':14,'y':12}):
+print({'x':13,'y':12})
+for i in pathFind(game_board, {'x':13,'y':12}):
     print(i)
