@@ -29,14 +29,23 @@ class board:
             tmp = []
         return ''.join(s)
 
+    # Fills the board with empty dictionaries
     def plot(self, coords, field, value):
         if(coords['x'] < self.width and coords['x'] >= 0 and coords['y'] < self.height and coords['y'] >= 0):
             self.board[coords['x']].set(coords['y'], field, value)
 
-    def getData(self, coords):
+    # Returns the value of the 'field' field of a set of coordinates' dictionary
+    def getData(self, coords, field):
         return self.board[coords['x']].get(coords['y'])
 
-    def setSnakes(self, coords, value):
+    # Sets the value of a set of coordinates' 'snake' field
+    def setSnake(self, coords, value):
         self.plot(coords, 'snake', value)
     
+    # Sets the value of a set of coordinates' 'food' field
+    def setFood(self, coords, value):
+        self.plot(coords, 'food', value)
+
+
+
     #def populateBoard(self):

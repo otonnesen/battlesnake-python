@@ -1,5 +1,6 @@
 # You can probably just assume in this class works (hopefully)
-# Method names should be pretty self-explanatory
+# Method names should be pretty self-explanatory, aything I thought
+# could have been ambiguous or unclear I commented
 
 class LinkedList:
     class Node:
@@ -45,6 +46,7 @@ class LinkedList:
             tmp = tmp.next
         tmp.next = self.Node()
 
+    # Returns a node's full dictionary
     def get(self, index):
         if(index >= self.size()):
             return
@@ -53,6 +55,16 @@ class LinkedList:
             tmp = tmp.next
         return tmp.data
 
+    # Returns a specific field from a node's dictionary
+    def get(self, index, field):
+        if(index >= self.size()):
+            return
+        tmp = self.head
+        for i in range(index):
+            tmp = tmp.next
+        return tmp.data['field']
+
+    # Sets a node's dictionary's 'field' field to 'data'
     def set(self, index, field, data):
         if(index >= self.size()):
             return
