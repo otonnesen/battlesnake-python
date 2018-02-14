@@ -15,7 +15,7 @@ class board:
         self.board = [LinkedList() for x in range(self.width)]
         for x in self.board:
             for y in range(self.height):
-                x.append(0)
+                x.append()
         self.you = data['you']
         self.snakes = data['snakes']
 
@@ -24,14 +24,19 @@ class board:
         tmp = []
         for i in range(self.width):
             for j in range(self.height):
-                tmp.append(self.board[j].index(i))
+                tmp.append(self.board[j].get(i))
             s.append(str(tmp)+'\n')
             tmp = []
         return ''.join(s)
 
-    def plot(self, coords, value):
+    def plot(self, coords, field, value):
         if(coords['x'] < self.width and coords['x'] >= 0 and coords['y'] < self.height and coords['y'] >= 0):
-            self.board[coords['x']].set(coords['y'], value)
+            self.board[coords['x']].set(coords['y'], field, value)
 
-    def populateBoard(self):
+    def getData(self, coords):
+        return self.board[coords['x']].get(coords['y'])
 
+    def setSnakes(self, coords, value):
+        self.plot(coords, 'snake', value)
+    
+    #def populateBoard(self):
