@@ -249,7 +249,7 @@ else:
     print 'failed plot'
 game.board[game.width-1][game.height-1] = 0
 print 'testing snakes method:'
-game.Snakes(game.other_snakes)
+game.Snakes()
 row = []
 for y in range(0, game.height):
     for x in range(0, game.width):
