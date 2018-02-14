@@ -71,19 +71,16 @@ class board ():
 
     def __str__(self):
         s = []
-        for i in range(self.height):
-            s.append('\n{')
-            for j in range(self.width-1):
-                s.append(str(self.board[j][i])+',')
-            s.append(str(self.board[i][-1])+'}')
+        for i in self.board:
+		s.append(str(i)+'\n')
         return ''.join(s)
 
 
     """
     function to add snakes the board
     """
-    def Snakes(self, snakes): # needs redoing
-        for snake in snakes['data']:
+    def Snakes(self): # needs redoing
+        for snake in self.other_snakes['data']:
             # if the snake will kill us on collision put a one where it can be
             if snake['length'] >= self.snake['length']:
                 self.plot(snake['body']['data'][0]['x'] + 1, snake['body']['data'][0]['y'], 4)
