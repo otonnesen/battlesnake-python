@@ -1,18 +1,13 @@
 from board import board
 import json
 
-data = json.load(open('data.json'))
+data = json.load(open('data2.json'))
 
 game_board = board(data)
 
-print(game_board)
-coord1 = {'x':4,'y':5}
-coord2 = {'x':7,'y':12}
-coord3 = {'x':13,'y':3}
-coord4 = {'x':0,'y':1}
-print(coord1)
-print(coord2)
-print(coord3)
-print(coord4)
-game_board.setSnakes(coord1, True)
-print(game_board)
+game_board.populateBoard()
+
+print('Food Board')
+print(game_board.getFoodBoard())
+print('\nSnake Board')
+print(game_board.getSnakeBoard())
