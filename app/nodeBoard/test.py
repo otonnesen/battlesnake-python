@@ -10,7 +10,6 @@ game_board.populateBoard()
 
 end = time.time()
 
-print(game_board.snakeBoardString())
-print(game_board.foodBoardString())
+print(game_board)
 
 print('Set up board in '+str(end-start)+' seconds')

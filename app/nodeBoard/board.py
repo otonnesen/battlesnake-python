@@ -17,9 +17,22 @@ class board:
         tmp = []
         for y in range(self.height):
             for x in range(self.width):
-                tmp.append(self.board[x][y])
-            s.append(str(tmp)+'\n')
+                if(self.board[x][y]['snake'] == None and self.board[x][y]['food'] == False):
+                    tmp.append('___')
+                elif(self.board[x][y]['snake'] == 'body'):
+                    tmp.append('_B_')
+                elif(self.board[x][y]['snake'] == 'head'):
+                    tmp.append('_H_')
+                elif(self.board[x][y]['snake'] == 'bodyYou'):
+                    tmp.append('_y_')
+                elif(self.board[x][y]['snake'] == 'headYou'):
+                    tmp.append('_Y_')
+                elif(self.board[x][y]['food']):
+                    tmp.append('_F_')
+
+            s.append(''.join(tmp)+'\n')
             tmp = []
+
         return ''.join(s)
 
     # Only snake board
@@ -63,15 +76,15 @@ class board:
         for y in range(self.height):
             for x in range(self.width):
                 if(self.board[x][y]['snake'] == None):
-                    tmp.append('_')
+                    tmp.append('___')
                 elif(self.board[x][y]['snake'] == 'body'):
-                    tmp.append('B')
+                    tmp.append('_B_')
                 elif(self.board[x][y]['snake'] == 'head'):
-                    tmp.append('H')
+                    tmp.append('_H_')
                 elif(self.board[x][y]['snake'] == 'bodyYou'):
-                    tmp.append('y')
+                    tmp.append('_y_')
                 elif(self.board[x][y]['snake'] == 'headYou'):
-                    tmp.append('Y')
+                    tmp.append('_Y_')
             s.append(''.join(tmp)+'\n')
             tmp = []
         return ''.join(s)
@@ -83,9 +96,9 @@ class board:
         for y in range(self.height):
             for x in range(self.width):
                 if(self.board[x][y]['food']):
-                    tmp.append('F')
+                    tmp.append('_F_')
                 else:
-                    tmp.append('_')
+                    tmp.append('___')
             s.append(''.join(tmp)+'\n')
             tmp = []
         return ''.join(s)
