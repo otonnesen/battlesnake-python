@@ -39,7 +39,9 @@ class board:
                 self.snakes.remove(i)
 
     # Full board
-    def __str__(self):
+    # Node, coordList is optional, and not called when printing the board normally
+    # It allows a list of coordinates to be input to see their path on the board for testing purposes
+    def __str__(self, coordList = []):
         s = []
         tmp = []
         for y in range(self.height):
@@ -56,6 +58,20 @@ class board:
                     tmp.append('_Y_')
                 elif(self.board[x][y]['food']):
                     tmp.append('_F_')
+
+###########################################################################
+#                       Optional
+#                     Path Testing
+
+                if(coordList[0]['x'] == x and coordList[0]['y'] == y):
+                    tmp[x] = 'BEG'
+                for i in coordList[1:-1]:
+                    if(i['x'] == x and i['y'] == y):
+                        tmp[x] = '=^='
+                if(coordList[-1]['x'] == x and coordList[-1]['y'] == y):
+                    tmp[x] = 'END'
+
+###########################################################################
 
             s.append(''.join(tmp)+'\n')
             tmp = []
