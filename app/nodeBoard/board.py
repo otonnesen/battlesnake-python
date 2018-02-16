@@ -1,10 +1,37 @@
 class board:
 
+    # Board Data Structure:
+    # {
+    #   'food' : bool
+    #      True        if food
+    #      False       if no food
+    #   'snake' : str
+    #      'body'      if enemy snake body
+    #      'head'      if enemy snake head
+    #      'bodyYou'   if your body
+    #      'headYou'   if your head
+    #   'value': int
+    #       sum of values defined below under 'Board Constants'
+    # }
+
+    # TODO: Implement 'value' to board data
+    # Currently only 'snake' and 'food' data are modified by populateBoard
+    
+    # Board Constants
+
+    FOOD = -3
+    KILLABLE_SNAKE = -2
+    EMPTY_TILE = 0
+    DANGEROUS_TILE = 4
+    ENEMY_SNAKE = 5
+
+
+
     def __init__(self, data):
         self.food = data['food']['data']
         self.width = data['width']
         self.height = data['height']
-        self.board = [[{'food':False,'snake':None} for y in range(self.height)] for x in range(self.width)]
+        self.board = [[{'food':False,'snake':None,'value':0} for y in range(self.height)] for x in range(self.width)]
         self.you = data['you']
         self.snakes = data['snakes']['data']
         for i in self.snakes:
