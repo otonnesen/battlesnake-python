@@ -2,6 +2,7 @@ import bottle
 import os
 import random
 from board import board
+from test import findPath
 
 @bottle.route('/static/<path:path>')
 def static(path):
@@ -52,9 +53,9 @@ def move():
         taunt: string;
     }
     """
-    game_board = board(data['width'], data['height'], data['you'], data['snakes'])
-    game_board.run()
-    moves = game_board.check()
+    game_board = board(data)
+    game_board.populateBoard()
+    findPath(game_board, game_board.you[0], 5)
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
