@@ -60,14 +60,14 @@ class board:
                     tmp.append('_F_')
 
 ###########################################################################
-#                       Optional
-#                     Path Testing
+#                             Optional
+#                            Path Testing
 
-                if(coordList[0]['x'] == x and coordList[0]['y'] == y):
-                    tmp[x] = 'BEG'
-                for i in coordList[1:-1]:
+                for i in coordList:
                     if(i['x'] == x and i['y'] == y):
                         tmp[x] = '=^='
+                if(coordList[0]['x'] == x and coordList[0]['y'] == y):
+                    tmp[x] = 'BEG'
                 if(coordList[-1]['x'] == x and coordList[-1]['y'] == y):
                     tmp[x] = 'END'
 
