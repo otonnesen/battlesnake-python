@@ -215,12 +215,6 @@ class board ():
             for point in enemy_snake['body']['data']:
                 if coord[0] == point['x'] and coord[1] == point['y']:
                     return False
-<<<<<<< HEAD
-
-=======
-        if(coord['x'] < 0 or coord['x'] > board.width - 1 or coord['y'] < 0 or coord['y'] > board.height):
-            return False
->>>>>>> 05a28f4e8147f1f07e4c4fd71c837929e71c74e9
         return True
 
     def plot(self, x, y, num): # Done
