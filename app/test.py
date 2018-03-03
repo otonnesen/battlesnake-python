@@ -1,5 +1,7 @@
+from point import point
 from board import board
 import json
+import AStar
 
 data = json.load(open('data.json'))
 
@@ -50,7 +52,7 @@ def spaceOK(board, coord):
         return False
             
     return True
-
+'''u
 start = {'x':13,'y':12}
 x = pathFind(game_board, start)
 
@@ -66,3 +68,9 @@ for i in range(len(x)):
         game_board.plot(j['x'],j['y'],i+1)
 
 print(game_board)
+'''
+
+p1 = point(1,2)
+p2 = point(5,9)
+
+AStar.AStar(p1,p2)
