@@ -3,7 +3,7 @@ import json
 
 data = json.load(open('data.json'))
 
-game_board = board(data['width'],data['height'],data['you'],data['snakes'])
+game_board = board(data['width'],data['height'],data['you'],data['snakes'], data['food'])
 
 # Returns list of possible paths of length depth stemming from start
 # Still need to figure out what to actually do with the list, but most likely

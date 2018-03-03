@@ -52,7 +52,7 @@ def move():
         taunt: string;
     }
     """
-    game_board = board(data['width'], data['height'], data['you'], data['snakes'])
+    game_board = board(data['width'], data['height'], data['you'], data['snakes'], data['food'])
     game_board.run()
     moves = game_board.check()
 

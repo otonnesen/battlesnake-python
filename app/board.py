@@ -60,18 +60,19 @@ class board ():
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
     }
     """
-    def __init__(self, width, height, us, snakes): # model needs reviewing
+    def __init__(self, width, height, us, snakes, food): # model needs reviewing
         self.board = [[0 for y in range(0, height)] for x in range(0, width)]
         self.width = width
         self.height = height
         self.snake = us
         self.snake_head = us['body']['data'][0]
         self.other_snakes = snakes
+        self.food = food
 
     def __str__(self):
         s = []
         for i in self.board:
-		s.append(str(i)+'\n')
+            s.append(str(i)+'\n')
         return ''.join(s)
 
 
@@ -79,6 +80,7 @@ class board ():
     function to add snakes the board
     """
     def Snakes(self): # needs redoing
+        self.addFood()
         for snake in self.other_snakes['data']:
             # if the snake will kill us on collision put a one where it can be
             if snake['length'] >= self.snake['length']:
@@ -104,8 +106,9 @@ class board ():
     """
     Function adds food to the board
     """
-    def food(self, food): 
-        pass
+    def addFood(self): 
+        for foodPoint in self.food['data']:
+            self.board[foodPoint['x']][foodPoint['y']]-=3
 
     """
     Basically whats going to kill us? dont do that
