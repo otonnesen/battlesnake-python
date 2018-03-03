@@ -3,6 +3,7 @@ import bottle
 import os
 import random
 from board import board
+global i
 
 @bottle.route('/static/<path:path>')
 def static(path):
@@ -71,7 +72,7 @@ def move():
 
     return {
         'move': random.choice(moves),
-        'taunt': animations[i%len(animations)]
+        'taunt': animations[i %len(animations)]
     }
     i = i+1
 
@@ -79,6 +80,5 @@ def move():
 application = bottle.default_app()
 if __name__ == '__main__':
     bottle.run(application, host=os.getenv('IP', '0.0.0.0'), port=os.getenv('PORT', '8080'))
-    global i
     i = 0
     
