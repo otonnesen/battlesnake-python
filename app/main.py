@@ -62,7 +62,7 @@ def move():
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
-    animations = ['( ͡° ͜ʖ ͡°)','ヽ༼ຈل͜ຈ༽ﾉ ʀᴀɪsᴇ ᴜʀ ᴅᴏɴɢᴇʀs ヽ༼ຈل͜ຈ༽ﾉ','( ͡ʘ╭͜ʖ╮͡ʘ)','( ͡⚆ ͜ʖ ͡⚆)','( ͡◉ ͜ʖ ͡◉)','(╯ຈل͜ຈ) ╯︵ ┻━┻']
+    animations = ['hello']
 
     return {
         'move': random.choice(moves),
