@@ -2,7 +2,7 @@ import bottle
 import os
 import random
 from board import board
-
+i = 0
 @bottle.route('/static/<path:path>')
 def static(path):
     return bottle.static_file(path, root='static/')
@@ -38,9 +38,9 @@ def start():
 
 
 @bottle.post('/move')
-def move():
+def move():  
     data = bottle.request.json
-    """ 
+    """
     json format for snake
     interface Snake {
         body: List<Point>;
@@ -61,9 +61,9 @@ def move():
     animations = ['<(o.o)>', '<(O.o)>', '<(o.O)>', '<(O.O)>']
     return {
         'move': random.choice(moves),
-        'taunt': random.choice(animations)
+        'taunt': animations[i]
     }
-
+    i = i+1
 
 # Expose WSGI app (so gunicorn can find it)
 application = bottle.default_app()
