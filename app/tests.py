@@ -197,7 +197,7 @@ data = {
 
 
 print 'checking init'
-game = board(data['width'], data['height'], data['you'], data['snakes'])
+game = board(data['width'], data['height'], data['you'], data['snakes'], data['food'])
 print "game height should be 20:", game.height
 print "game width should be 20:", game.width
 print "the width of the game board should be 20:",len(game.board)
