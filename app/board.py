@@ -96,6 +96,7 @@ class board ():
             
             for coord in snake['body']['data']:
                 self.plot(coord['x'], coord['y'], 5)
+        self.plot(self.snake['body']['data'][-1]['x'], self.snake['body']['data'][-1]['y'], -4)
         
     """
     function to clear the board at the end of the turn
