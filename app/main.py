@@ -3,7 +3,7 @@ import bottle
 import os
 import random
 from board import board
-i = 0
+
 @bottle.route('/static/<path:path>')
 def static(path):
     return bottle.static_file(path, root='static/')
@@ -79,5 +79,5 @@ def move():
 application = bottle.default_app()
 if __name__ == '__main__':
     bottle.run(application, host=os.getenv('IP', '0.0.0.0'), port=os.getenv('PORT', '8080'))
-    i = 0
+    global i = 0
     
