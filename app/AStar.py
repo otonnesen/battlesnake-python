@@ -67,4 +67,16 @@ def AStar(start, goal):
         closedSet.append(current)
 
         for n in neighbors(current):
+            if n in closedSet:
+                continue
+            else:
+                openSet.add(n)
+            tentative_gScore = gScore[current] + 1
+            if(tentative_gScore > gScore[neighbor]):
+                continue # Not improved path
 
+            cameFrom[neighbor] = current
+            gScore[neighbor] = tentative_gScore
+            fScore[neighbor] = gScore[neighbor] + heuristic(neighbor, goal)
+
+    return False
