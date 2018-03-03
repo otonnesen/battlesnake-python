@@ -96,6 +96,7 @@ class board ():
             
             for coord in snake['body']['data']:
                 self.plot(coord['x'], coord['y'], 5)
+        self.plot(self.snake['body']['data'][-1]['x'], self.snake['body']['data'][-1]['y'], -5)
         
     """
     function to clear the board at the end of the turn
@@ -199,7 +200,7 @@ class board ():
 
         return best_moves
         
-    def spaceOK(board, coord):
+    def spaceOK(self, board, coord):
         for i in data['snakes']['data']:
 
             if(data['you']['body']['data'][0] == i['body']['data'][0] and data['you']['length'] > i['length']):
