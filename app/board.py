@@ -199,7 +199,7 @@ class board ():
 
         return best_moves
         
-    def spaceOK(board, coord):
+    def spaceOK(self, board, coord):
         for i in data['snakes']['data']:
 
             if(data['you']['body']['data'][0] == i['body']['data'][0] and data['you']['length'] > i['length']):
