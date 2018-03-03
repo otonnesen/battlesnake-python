@@ -207,9 +207,9 @@ class board ():
             for j in i['body']['data']:
                 if(coord == j):
                     return False
-    if(coord['x'] < 0 or coord['x'] > board.width - 1 or coord['y'] < 0 or coord['y'] > board.height):
-        return False
-    return True
+        if(coord['x'] < 0 or coord['x'] > board.width - 1 or coord['y'] < 0 or coord['y'] > board.height):
+            return False
+        return True
 
     def plot(self, x, y, num): # Done
         if (x < self.width and x >= 0) and (y < self.height and y >= 0):

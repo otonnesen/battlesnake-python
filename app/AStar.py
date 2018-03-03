@@ -7,7 +7,7 @@ def eucDistance(start, end):
     return ((start.x-end.x)**2+(start.y-end.y)**2)**0.5
 
 def manDistance(start, end):
-    dx = start.x - end.ex
+    dx = start.x - end.x
     dy = start.y - end.y
     return dx + dy
 
@@ -31,20 +31,22 @@ def direction(start, end):
             return 'down'
 
 def neighbors(coords):
-    return [point(coords.x-1,coords.y),point(coords.x+1,coords.y),point(point.x,point.y-1),point(point.x,point.y+1)]
+    return [point(coords.x-1,coords.y), point(coords.x+1,coords.y), point(coords.x,coords.y-1), point(coords.x,coords.y+1)]
 
 # Function that minimizes function
 # f(x) = g(x) + h(x)
 # Where n(x) is the nodal distance between x and start
 # and d(x) is the Euclidean distance between x and start
 def AStar(start, goal):
+    print(start)
+    print(goal)
     # Priority Queue
     closedSet = []
 
     # Priority Queue
     openSet = []
 
-    heapq.heappush(toEval, (0, start))
+    heapq.heappush(openSet, (0, start))
 
     # Dictionary of nodes from which each element can be most easily reached
     cameFrom = {}
@@ -59,20 +61,19 @@ def AStar(start, goal):
     fScore[start] = heuristic(start, goal)
 
     while openSet:
-        current = heapq.heappop(openSet)
-        if(current[1] == goal):
+        current = heapq.heappop(openSet)[1]
+        if(current == goal):
             return cameFrom
 
-        openSet.remove(current)
         closedSet.append(current)
 
         for n in neighbors(current):
             if n in closedSet:
                 continue
             else:
-                openSet.add(n)
+                heapq.heappush(openSet, (fScore[n], n))
             tentative_gScore = gScore[current] + 1
-            if(tentative_gScore > gScore[neighbor]):
+            if(tentative_gScore > gScore[n]):
                 continue # Not improved path
 
             cameFrom[neighbor] = current
