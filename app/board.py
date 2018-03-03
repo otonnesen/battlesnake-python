@@ -199,7 +199,18 @@ class board ():
 
         return best_moves
         
+    def spaceOK(board, coord):
+        for i in data['snakes']['data']:
 
+            if(data['you']['body']['data'][0] == i['body']['data'][0] and data['you']['length'] > i['length']):
+                    return True
+            for j in i['body']['data']:
+                if(coord == j):
+                    return False
+    if(coord['x'] < 0 or coord['x'] > board.width - 1 or coord['y'] < 0 or coord['y'] > board.height):
+        return False
+            
+    return True
 
     def plot(self, x, y, num): # Done
         if (x < self.width and x >= 0) and (y < self.height and y >= 0):

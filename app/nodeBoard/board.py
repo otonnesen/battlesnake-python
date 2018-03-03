@@ -62,14 +62,14 @@ class board:
 ###########################################################################
 #                             Optional
 #                            Path Testing
-
-                for i in coordList:
-                    if(i['x'] == x and i['y'] == y):
-                        tmp[x] = '=^='
-                if(coordList[0]['x'] == x and coordList[0]['y'] == y):
-                    tmp[x] = 'BEG'
-                if(coordList[-1]['x'] == x and coordList[-1]['y'] == y):
-                    tmp[x] = 'END'
+                if(coordList != []):
+                    for i in coordList:
+                        if(i['x'] == x and i['y'] == y):
+                            tmp[x] = '=^='
+                    if(coordList[0]['x'] == x and coordList[0]['y'] == y):
+                        tmp[x] = 'BEG'
+                    if(coordList[-1]['x'] == x and coordList[-1]['y'] == y):
+                        tmp[x] = 'END'
 
 ###########################################################################
 
