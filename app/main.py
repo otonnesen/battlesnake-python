@@ -70,7 +70,7 @@ def move():
 
     return {
         'move': random.choice(moves),
-        'taunt': animations[i]
+        'taunt': animations[i%len(animations)]
     }
     i = i+1
 
