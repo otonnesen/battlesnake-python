@@ -30,7 +30,7 @@ def start():
         'color': '#add8e6', #light blue
         'secondary_color': '#ffff00', # yellow
         'taunt': 'WOW',
-        'head_url': "https://i.imgur.com/KdK8Eu9.gifv",
+        'head_url': "https://i.imgur.com/KdK8Eu9.gif",
         'name': 'Computer_Science_First_Years',
         'head_type': 'fang',
         'tail_type': 'pixel'
