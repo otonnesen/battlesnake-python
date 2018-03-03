@@ -3,7 +3,10 @@ import bottle
 import os
 import random
 from board import board
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 @bottle.route('/static/<path:path>')
 def static(path):
     return bottle.static_file(path, root='static/')
@@ -59,20 +62,13 @@ def move():
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
-    animations = [
-    '(\\*_*)\\TT',
-    '(\\*_*)\\ TT',
-    '(\\*_*)\\  [',
-    '(J*_*）J / _|__|_',
-    '(\\*_*)\\  [',
-    '(\\*_*)\\ ┬┬',
-    '(\\*_*)\\┬┬'
-]
+    animations = ['( ͡° ͜ʖ ͡°)','ヽ༼ຈل͜ຈ༽ﾉ ʀᴀɪsᴇ ᴜʀ ᴅᴏɴɢᴇʀs ヽ༼ຈل͜ຈ༽ﾉ','( ͡ʘ╭͜ʖ╮͡ʘ)','( ͡⚆ ͜ʖ ͡⚆)','( ͡◉ ͜ʖ ͡◉)','(╯ຈل͜ຈ) ╯︵ ┻━┻']
 
     return {
         'move': random.choice(moves),
         'taunt': random.choice(animations)
     }
+
 
 
 # Expose WSGI app (so gunicorn can find it)
