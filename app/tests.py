@@ -1,74 +1,44 @@
 from board import board
 data = {
-  "width": 14,
-  "height": 14,
-  "id": 131,
-  "turn": 39,
+  "width": 10,
+  "height": 18,
+  "id": 933,
+  "turn": 114,
   "snakes": {
     "data": [
       {
-        "id": "d9dfce32-6614-4d52-aebe-71686ac46329",
-        "health": 99,
-        "length": 11,
-        "taunt": "Lil B Big Snake",
-        "name": "P = NP",
+        "id": "64f03f9f-c332-4330-8a1e-8342c8d887c7",
+        "health": 81,
+        "length": 5,
+        "taunt": "Boop the snoot!",
+        "name": "LUL",
         "object": "snake",
         "body": {
           "data": [
             {
               "object": "point",
               "x": 4,
-              "y": 13
-            },
-            {
-              "object": "point",
-              "x": 3,
-              "y": 13
-            },
-            {
-              "object": "point",
-              "x": 3,
-              "y": 12
-            },
-            {
-              "object": "point",
-              "x": 3,
-              "y": 11
-            },
-            {
-              "object": "point",
-              "x": 3,
-              "y": 10
-            },
-            {
-              "object": "point",
-              "x": 3,
-              "y": 9
-            },
-            {
-              "object": "point",
-              "x": 3,
-              "y": 8
-            },
-            {
-              "object": "point",
-              "x": 3,
-              "y": 7
+              "y": 4
             },
             {
               "object": "point",
               "x": 4,
-              "y": 7
+              "y": 5
             },
             {
               "object": "point",
-              "x": 4,
-              "y": 6
+              "x": 3,
+              "y": 5
             },
             {
               "object": "point",
-              "x": 5,
-              "y": 6
+              "x": 3,
+              "y": 4
+            },
+            {
+              "object": "point",
+              "x": 3,
+              "y": 3
             }
           ],
           "object": "list"
@@ -76,27 +46,47 @@ data = {
       },
       {
         "id": "c3e89743-fbdd-465b-8208-45ea0919b05a",
-        "health": 61,
-        "length": 3,
-        "taunt": "v1",
+        "health": 92,
+        "length": 7,
+        "taunt": "<(O.o)>",
         "name": "test",
         "object": "snake",
         "body": {
           "data": [
             {
               "object": "point",
-              "x": 2,
+              "x": 4,
+              "y": 2
+            },
+            {
+              "object": "point",
+              "x": 5,
+              "y": 2
+            },
+            {
+              "object": "point",
+              "x": 6,
+              "y": 2
+            },
+            {
+              "object": "point",
+              "x": 7,
+              "y": 2
+            },
+            {
+              "object": "point",
+              "x": 8,
+              "y": 2
+            },
+            {
+              "object": "point",
+              "x": 8,
               "y": 3
             },
             {
               "object": "point",
-              "x": 1,
+              "x": 7,
               "y": 3
-            },
-            {
-              "object": "point",
-              "x": 1,
-              "y": 4
             }
           ],
           "object": "list"
@@ -109,117 +99,95 @@ data = {
     "data": [
       {
         "object": "point",
-        "x": 0,
-        "y": 0
-      },
-      {
-        "object": "point",
-        "x": 3,
+        "x": 9,
         "y": 3
       },
       {
         "object": "point",
-        "x": 11,
-        "y": 7
+        "x": 5,
+        "y": 0
       },
       {
         "object": "point",
-        "x": 13,
-        "y": 5
+        "x": 8,
+        "y": 1
       },
       {
         "object": "point",
-        "x": 9,
+        "x": 8,
+        "y": 16
+      },
+      {
+        "object": "point",
+        "x": 2,
         "y": 12
+      },
+      {
+        "object": "point",
+        "x": 3,
+        "y": 16
+      },
+      {
+        "object": "point",
+        "x": 8,
+        "y": 11
+      },
+      {
+        "object": "point",
+        "x": 7,
+        "y": 6
       }
     ],
     "object": "list"
   },
   "object": "world",
   "dead_snakes": {
-    "data": [
-      {
-        "id": "64f03f9f-c332-4330-8a1e-8342c8d887c7",
-        "health": 93,
-        "length": 3,
-        "taunt": "Boop the snoot!",
-        "name": "LUL",
-        "object": "snake",
-        "body": {
-          "data": [
-            {
-              "object": "point",
-              "x": 1,
-              "y": 0
-            },
-            {
-              "object": "point",
-              "x": 0,
-              "y": 0
-            },
-            {
-              "object": "point",
-              "x": 1,
-              "y": 0
-            }
-          ],
-          "object": "list"
-        }
-      },
-      {
-        "id": "1586a251-ecdf-414b-90dd-e0e75a05abcc",
-        "health": 91,
-        "length": 3,
-        "taunt": "battlesnake-python!",
-        "name": "BaffleSnake0.1",
-        "object": "snake",
-        "body": {
-          "data": [
-            {
-              "object": "point",
-              "x": 0,
-              "y": 3
-            },
-            {
-              "object": "point",
-              "x": 1,
-              "y": 3
-            },
-            {
-              "object": "point",
-              "x": 2,
-              "y": 3
-            }
-          ],
-          "object": "list"
-        }
-      }
-    ],
+    "data": [],
     "object": "list"
   },
   "you": {
     "id": "c3e89743-fbdd-465b-8208-45ea0919b05a",
-    "health": 61,
-    "length": 3,
-    "taunt": "v1",
+    "health": 92,
+    "length": 7,
+    "taunt": "<(O.o)>",
     "name": "test",
     "object": "snake",
     "body": {
       "data": [
         {
           "object": "point",
-          "x": 2,
+          "x": 4,
+          "y": 2
+        },
+        {
+          "object": "point",
+          "x": 5,
+          "y": 2
+        },
+        {
+          "object": "point",
+          "x": 6,
+          "y": 2
+        },
+        {
+          "object": "point",
+          "x": 7,
+          "y": 2
+        },
+        {
+          "object": "point",
+          "x": 8,
+          "y": 2
+        },
+        {
+          "object": "point",
+          "x": 8,
           "y": 3
         },
         {
           "object": "point",
-          "x": 1,
+          "x": 7,
           "y": 3
-        },
-        {
-          "object": "point",
-          "x": 1,
-          "y": 4
         }
       ],
       "object": "list"
