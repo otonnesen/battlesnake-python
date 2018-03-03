@@ -217,4 +217,4 @@ class board ():
             self.board[x][y] += num
 
     def run(self):
-        self.Snakes(self.other_snakes)
+        self.Snakes()
