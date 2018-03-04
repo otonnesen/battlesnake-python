@@ -3,10 +3,7 @@ import bottle
 import os
 import random
 from board import board
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 @bottle.route('/static/<path:path>')
 def static(path):
     return bottle.static_file(path, root='static/')
