@@ -60,6 +60,10 @@ class board ():
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
     }
     """
+
+    def eucDistance(start, end):
+        return ((start.x-end.x)**2+(start.y-end.y)**2)**0.5
+
     def __init__(self, width, height, us, snakes, food): # model needs reviewing
         self.board = [[0 for y in range(0, height)] for x in range(0, width)]
         self.width = width
@@ -200,7 +204,7 @@ class board ():
 
         return best_moves
         
-    def spaceOK(self, board, coord):
+    def spaceOK(self, coord):
         if (coord[0] < 0):
             return False
         if (coord[0] > self.width-1):

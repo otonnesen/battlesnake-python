@@ -3,6 +3,7 @@ import bottle
 import os
 import random
 from board import board
+from BFS import BFS
 
 @bottle.route('/static/<path:path>')
 def static(path):
@@ -55,14 +56,23 @@ def move():
     """
     game_board = board(data['width'], data['height'], data['you'], data['snakes'], data['food'])
     game_board.run()
-    moves = game_board.check()
+    #moves = game_board.check()
+
+    d = 1000
+    for food in game_board.food['data']:
+        if game_board.eucDistance([game_board.you['body']['data'][0]['x'], game_board.you['body']['data'][0]['y']], [food['x'],food['y']]) < d:
+            d = game_board.eucDistance(game_board.you['body']['data'][0], [food['data']['x'],food['data']['y']])
+            c = food
+    moves = BFS([game_board.you['body']['data'][0]['x'], game_board.you['body']['data'][0]['y']], [c['x'], c['y']])
+
+
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
     animations = ['hello']
 
     return {
-        'move': random.choice(moves),
+        'move': moves[0],
         'taunt': random.choice(animations)
     }
 

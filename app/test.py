@@ -1,7 +1,8 @@
+import time
 from point import point
 from board import board
 import json
-import AStar
+from BFS import BFS
 
 data = json.load(open('data.json'))
 
@@ -70,7 +71,11 @@ for i in range(len(x)):
 print(game_board)
 '''
 
-p1 = point(1,2)
-p2 = point(5,9)
-
-AStar.AStar(p1,p2)
+p1 = [0,4]
+p2 = [15,19]
+start = time.time()
+x = BFS(p1,p2,game_board)
+end = time.time()
+for i in x:
+    print i
+print end-start
